@@ -56,6 +56,11 @@ Rails.application.routes.draw do
 
   root :to => 'welcome#index'
 
-  resources :sympthom
-  resources :report
+
+  get 'sympthoms' => 'sympthom#list'
+  get 'severities' => 'severity#list'
+  get 'reports' => 'report#list'
+
+  post 'report' => 'report#create'
+
 end
