@@ -31,19 +31,21 @@ $(document).ready(function() {
 
     // Submit the report
     $("#report-button").click(function(e) {
+        var body = {
+            lat: map.center.lat(),
+            lon: map.center.lng(),
+            from: $("#from").val(),
+            note: $("#note").val(),
+            severity: $("#severities").val(),
+            sympthom: $("#symptoms").val()
+        };
+
         e.preventDefault();
 
         $.ajax({
             url: "/report",
             type: "POST",
-            data: {
-                lat: map.center.lat(),
-                lon: map.center.lng(),
-                from: $("#from").val(),
-                note: $("#note").val(),
-                severity: $("#severities").val(),
-                sympthom: $("#symptoms").val()
-            },
+            data: JSON.stringify(body),
             success:function(result) {
                 $("sharelink").html(result);
             }
