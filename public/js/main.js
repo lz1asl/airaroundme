@@ -1,13 +1,20 @@
-// Closes the sidebar menu
-$("#menu-close").click(function(e) {
-    e.preventDefault();
-    $("#sidebar-wrapper").toggleClass("active");
-});
 
-// Opens the sidebar menu
-$("#menu-toggle").click(function(e) {
-    e.preventDefault();
-    $("#sidebar-wrapper").toggleClass("active");
+function collapseNavbar() {
+   if ($(".navbar").offset().top > 50) {
+       $(".navbar-fixed-top").addClass("top-nav-collapse");
+   } else {
+       $(".navbar-fixed-top").removeClass("top-nav-collapse");
+   }
+}
+
+$(window).scroll(collapseNavbar);
+$(document).ready(collapseNavbar);
+
+// Closes the Responsive Menu on Menu Item Click
+$('.navbar-collapse ul li a').click(function() {
+ if ($(this).attr('class') != 'dropdown-toggle active' && $(this).attr('class') != 'dropdown-toggle') {
+   $('.navbar-toggle:visible').click();
+ }
 });
 
 // Scrolls to the selected menu item on the page
