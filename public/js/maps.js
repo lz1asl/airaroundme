@@ -78,9 +78,9 @@ function initMap() {
      */
     var baseURL = 'https://airaroundme.herokuapp.com/sampledata/';
 
-    $.each(retrieveLandmarkFiles(), function(index, fileName) {
+/*    $.each(retrieveLandmarkFiles(), function(index, fileName) {
         applyMapLandmarks(baseURL + fileName, map);
-    });
+    });*/
 }
 
 function retrieveLandmarkFiles() {
