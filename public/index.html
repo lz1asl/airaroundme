@@ -92,16 +92,27 @@
         <!-- /.container -->
     </section>
 
-    <!-- Form -->
-    <form method="post">
-        <label>Severities</label>
-        <select class="combobox input-lg" id="severities">
-
-        </select>
-    </form>
-
     <!-- Map -->
     <section id="airaroudyou" class="map">
+        <form method="post" action="">
+            <label for="from">Your name:</label>
+            <input type="text" id="from" />
+
+            <label for="note">Comment:</label>
+            <input type="text" id="note" />
+
+            <label for="symptoms">Symptom:</label>
+            <select class="combobox input-lg" id="symptoms">
+                <option value="" selected>Select a symptom</option>
+            </select>
+
+            <label for="severities">Severity:</label>
+            <select class="combobox input-lg" id="severities">
+                <option value="" selected>Select severity</option>
+            </select>
+
+            <button id="report-button">Report</button>
+        </form>
         <input id="pac-input" class="controls" type="text" placeholder="Search Box">
         <div id="map"></div>
     </section>
