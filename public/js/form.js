@@ -1,7 +1,7 @@
 $(document).ready(function() {
     // Load symptom dropdown options
     $.ajax({
-        url: 'sympthoms',
+        url: '/sympthoms',
         type: 'GET',
         dataType: 'json',
         success: function (json) {
@@ -16,7 +16,7 @@ $(document).ready(function() {
 
     // Load severity dropdown options
     $.ajax({
-        url: 'severities',
+        url: '/severities',
         type: 'GET',
         dataType: 'json',
         success: function (json) {
@@ -28,4 +28,26 @@ $(document).ready(function() {
             console.error('Cannot load the severities options: ' + JSON.parse(json))
         }
     });
+
+    // Submit the report
+    $("#report-button").click(function(e) {
+        e.preventDefault();
+
+        $.ajax({
+            url: "/report",
+            type: "POST",
+            data: {
+                lat: map.center.lat(),
+                lon: map.center.lng(),
+                from: $("#from").val(),
+                note: $("#note").val(),
+                severity: $("#severities").val(),
+                sympthom: $("#symptoms").val()
+            },
+            success:function(result) {
+                $("sharelink").html(result);
+            }
+        });
+    });
+
 });
