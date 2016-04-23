@@ -15,7 +15,13 @@ class ReportController < ApplicationController
 
     # TODO filter by severity and sympthom
 
-    render json: @reports, :only => [:id, :lat, :lon, :note, :severity_id, :sympthom_id]
+    @hash = Gmaps4rails.build_markers(@reports) do |report, marker|
+      marker.lat report.lat
+      marker.lng report.lon
+      marker.title report.note
+    end
+
+    render json: @hash
   end
 
 
