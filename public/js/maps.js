@@ -205,10 +205,21 @@ function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 0, lng: 0},
         styles: styleSheet,
-        zoom: 10
+        zoom: 10,
+        mapTypeId: google.maps.MapTypeId.TERRAIN
     });
 
-// Create the search box and link it to the UI element.
+    // Set the center of the map to the geolocation if allowed by the browser
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            map.setCenter({
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            });
+        });
+    }
+
+    // Create the search box and link it to the UI element.
     var input = document.getElementById('pac-input');
     var searchBox = new google.maps.places.SearchBox(input);
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
@@ -263,13 +274,18 @@ function initMap() {
         map.fitBounds(bounds);
     });
 
-    // Set the center of the map to the geolocation if allowed by the browser
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-            map.setCenter({
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            });
-        });
-    }
+    var baseURL = 'https://airaroundme.herokuapp.com/',
+        url = baseURL + 'sampledata/AIRS_CO-1Day.kml';
+
+    applyMapLandmarks(url, map);
+}
+
+function applyMapLandmarks(url, map) {
+    var options = {
+        suppressInfoWindows: true,
+        preserveViewport: false,
+        map: map
+    };
+
+    var kmlLayer = new google.maps.KmlLayer(url, options);
 }
