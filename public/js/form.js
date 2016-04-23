@@ -5,12 +5,11 @@ $(document).ready(function() {
         dataType: 'json',
         success: function (json) {
             $.each(json, function (i, value) {
-                debugger;
-                $('#severities').append($('<option>').text(value).attr('value', value));
+                $('#severities').append($('<option>').text(value.label).attr('value', value.id));
             });
         },
         failure: function (json) {
-            debugger;
+            console.error('Cannot load the severities options: ' + JSON.parse(json))
         }
     });
 });
