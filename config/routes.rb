@@ -55,4 +55,7 @@ Rails.application.routes.draw do
   #   end
 
   root :to => 'welcome#index'
+
+  resources :sympthom
+  resources :report
 end

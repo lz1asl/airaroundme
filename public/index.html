@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Stylish Portfolio - Start Bootstrap Theme</title>
+    <title>Air Around Me</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -48,13 +48,13 @@
                 <a href="#about" onclick = $("#menu-close").click(); >About</a>
             </li>
             <li>
+                <a href="#contact" onclick = $("#menu-close").click(); >Map</a>
+            </li>
+            <li>
                 <a href="#services" onclick = $("#menu-close").click(); >Services</a>
             </li>
             <li>
                 <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
-            </li>
-            <li>
-                <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
             </li>
         </ul>
     </nav>
@@ -62,10 +62,13 @@
     <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center">
-            <h1>Start Bootstrap</h1>
-            <h3>Free Bootstrap Themes &amp; Templates</h3>
+            <h1><img src="img/logo.png" alt="" /></h1>
+            <!-- <h3>Drink More Water</h3> -->
             <br>
-            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+            <!-- <a href="#about" class="btn btn-dark btn-lg">Find Out More</a> -->
+            <a href="#about" class="btn-arrow btn-circle page-scroll">
+                <i class="fa fa-angle-double-down animated"></i>
+            </a>
         </div>
     </header>
 
@@ -74,8 +77,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
-                    <p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
+                    <h2>Air Around Me</h2>
+                    <p class="lead">Combining Nasa, meteo and croud sourced information to check .<a href="#contact">the air conditions around me</a>.</p>
                 </div>
             </div>
             <!-- /.row -->
@@ -83,75 +86,11 @@
         <!-- /.container -->
     </section>
 
-    <!-- Services -->
-    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    <section id="services" class="services bg-primary">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Our Services</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-cloud fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Service Name</strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-compass fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Service Name</strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Service Name</strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-shield fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Service Name</strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.row (nested) -->
-                </div>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
+    <!-- Map -->
+    <section id="contact" class="map">
+        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+        <div id="map"></div>
+
     </section>
 
     <!-- Callout -->
@@ -161,84 +100,17 @@
         </div>
     </aside>
 
-    <!-- Portfolio -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Our Work</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.row (nested) -->
-                    <a href="#" class="btn btn-dark">View More Items</a>
-                </div>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-    <!-- Call to Action -->
-    <aside class="call-to-action bg-primary">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h3>The buttons below are impossible to resist.</h3>
-                    <a href="#" class="btn btn-lg btn-light">Click Me!</a>
-                    <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
-                </div>
-            </div>
-        </div>
-    </aside>
-
-    <!-- Map -->
-    <section id="contact" class="map">
-        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-        <div id="map"></div>
-        <script src="js/maps.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAixmsEVXEl18PSOHuC6HHKnxG6SaVxll0&libraries=places&callback=initMap" async defer></script>
-    </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>Start Bootstrap</strong>
+                    <!-- <h4><strong>Start Bootstrap</strong> -->
                     </h4>
-                    <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
+                    <!-- <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p> -->
                     <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
+                        <!-- <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li> -->
                         <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a>
                         </li>
                     </ul>
@@ -255,7 +127,7 @@
                         </li>
                     </ul>
                     <hr class="small">
-                    <p class="text-muted">Copyright &copy; Your Website 2014</p>
+                    <!-- <p class="text-muted">Copyright &copy; Your Website 2014</p> -->
                 </div>
             </div>
         </div>
@@ -266,6 +138,13 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/map_styles.js"></script>
+    <script src="js/maps.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAixmsEVXEl18PSOHuC6HHKnxG6SaVxll0&callback=initMap" async defer></script>
+
+    <!-- Main  -->
+    <script src="js/main.js"></script>
 
 </body>
 

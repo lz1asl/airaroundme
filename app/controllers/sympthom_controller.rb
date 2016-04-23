@@ -1,0 +1,2 @@
+class SympthomController < ApplicationController
+end
