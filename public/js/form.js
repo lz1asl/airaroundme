@@ -1,7 +1,7 @@
 $(document).ready(function() {
     // Load symptom dropdown options
     $.ajax({
-        url: 'symptoms',
+        url: 'sympthoms',
         type: 'GET',
         dataType: 'json',
         success: function (json) {
