@@ -2,7 +2,7 @@ class ReportController < ApplicationController
 
   def list
     @reports =  Report.all
-    render json: @reports, :only => [:id, :lat, :lon, :from, :note]
+    render json: @reports, :only => [:id, :lat, :lon, :from, :note, :severity_id, :sympthom_id]
   end
 
 
@@ -28,15 +28,8 @@ render json @reports, :only => [:id, :lat, :lon, :from, :note]
         lon: report['lon']
     )
 
-    if report['severity']
-        severity = Severity.find(report['severity'])
-        @report.severity = severity
-    end
-
-    if report['sympthom']
-      sympthom = Severity.find(report['sympthom'])
-      @report.sympthom = sympthom
-    end
+    @report.severity_id = report['severity']
+    @report.sympthom_id = report['sympthom']
 
     @report.save
     puts @report
