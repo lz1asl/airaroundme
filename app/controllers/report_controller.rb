@@ -2,20 +2,26 @@ class ReportController < ApplicationController
 
   def list
     @reports =  Report.all
-    render json: @reports, :only => [:id, :lat, :lon, :from, :note]
+    render json: @reports, :only => [:id, :lat, :lon, :from, :note, :severity_id, :sympthom_id]
   end
 
 
   def search
 
-=begin
-:origin => [37.792,-122.393]
-Location.within(5, :origin => @somewhere)
+    filter = ActiveSupport::JSON.decode request.body.string
+    radius = filter['radius']
+    origin = [filter['lat'], filter['lon']]
+    @reports = Report.within(radius, origin: origin)
 
-@reports =  Report.findby
+    # TODO filter by severity and sympthom
 
-render json @reports, :only => [:id, :lat, :lon, :from, :note]
-=end
+    @hash = Gmaps4rails.build_markers(@reports) do |report, marker|
+      marker.lat report.lat
+      marker.lng report.lon
+      marker.title report.note
+    end
+
+    render json: @hash
   end
 
 
@@ -28,18 +34,10 @@ render json @reports, :only => [:id, :lat, :lon, :from, :note]
         lon: report['lon']
     )
 
-    if report['severity']
-        severity = Severity.find(report['severity'])
-        @report.severity = severity
-    end
-
-    if report['sympthom']
-      sympthom = Severity.find(report['sympthom'])
-      @report.sympthom = sympthom
-    end
+    @report.severity_id = report['severity'] unless report['severity'].blank?
+    @report.sympthom_id = report['sympthom'] unless report['sympthom'].blank?
 
     @report.save
-    puts @report
     render json: @report, :only => [:id, :label]
   end
 end
