@@ -119,23 +119,22 @@
         <!-- /.container -->
     </section>
 
-    <!-- Form -->
-    <form method="post">
-        <label>Symptom:</label>
-        <select class="combobox input-lg" id="symptoms">
-            <option value="" selected>Select a symptom</option>
-        </select>
-
-        <label>Severity:</label>
-        <select class="combobox input-lg" id="severities">
-            <option value="" selected>Select severity</option>
-        </select>
-
-        <button value="Report"></button>
-    </form>
-
     <!-- Map -->
     <section id="contact" class="map">
+        <form method="post" action="">
+            <label>Symptom:</label>
+            <select class="combobox input-lg" id="symptoms">
+                <option value="" selected>Select a symptom</option>
+            </select>
+
+            <label>Severity:</label>
+            <select class="combobox input-lg" id="severities">
+                <option value="" selected>Select severity</option>
+            </select>
+
+            <button value="Report"></button>
+        </form>
+
         <input id="pac-input" class="controls" type="text" placeholder="Search Box">
         <div id="map"></div>
     </section>
