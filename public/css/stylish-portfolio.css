@@ -238,7 +238,15 @@ hr.small {
     margin: 5px 5px 0 0;
 }*/
 
-
+.navbar-toggle {
+    position: relative;
+    float: right;
+    margin: 7px 14px;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    padding: 0 10px;
+}
 
 .navbar-custom {
     margin-bottom: 0;
@@ -349,12 +357,6 @@ hr.small {
     }
 
     .navbar-custom.top-nav-collapse .navbar-brand:before {
-        /*content:"";
-        width: 60px;
-        position: absolute;
-        top: 8px;
-        left: 10px;
-        height: 40px;*/
         background: url(../img/logo_small_white.png) no-repeat;
         -webkit-background-size: cover;
         background-size: cover;
@@ -375,8 +377,17 @@ hr.small {
         -moz-box-shadow: 0 0 5px rgba(0,0,0,0.5);
         -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
     }
+
+    .navbar-custom .navbar-brand:before {
+        background: url(../img/logo_small_white.png) no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
     .map {
         height: 75%;
+    }
+    .navbar-brand.page-scroll {
+        color: #fff;
     }
 }
 
