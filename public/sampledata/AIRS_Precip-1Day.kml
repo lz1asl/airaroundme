@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Folder>
+	<name>AIRS Precip, -1Day</name>
+	<open>1</open>
+	<LookAt>
+		<longitude>-84.22627223228012</longitude>
+		<latitude>41.74886100989812</latitude>
+		<altitude>0</altitude>
+		<heading>3.944303199506215</heading>
+		<tilt>0</tilt>
+		<range>8105893.917126813</range>
+		<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+	</LookAt>
+	<GroundOverlay>
+		<name>AIRS Precip A, -1 Day</name>
+		<open>1</open>
+		<LookAt>
+			<longitude>-89.00752282659667</longitude>
+			<latitude>45.57295478180439</latitude>
+			<altitude>0</altitude>
+			<heading>9.243279581943375</heading>
+			<tilt>0</tilt>
+			<range>8125926.696435873</range>
+			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+		</LookAt>
+		<Icon>
+			<href>http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_airsnrt?VERSION=1.1.1&amp;REQUEST=GetMap&amp;SRS=EPSG:4326&amp;WIDTH=1000&amp;HEIGHT=1000&amp;LAYERS=AIRS_Precip_A-1day&amp;TRANSPARENT=TRUE&amp;FORMAT=image/png&amp;</href>
+			<viewRefreshMode>onStop</viewRefreshMode>
+		</Icon>
+		<LatLonBox>
+			<north>90</north>
+			<south>-25.58439060150198</south>
+			<east>180</east>
+			<west>-180</west>
+		</LatLonBox>
+	</GroundOverlay>
+	<GroundOverlay>
+		<name>AIRS Precip D, -1 Day</name>
+		<open>1</open>
+		<LookAt>
+			<longitude>-89.00752282659667</longitude>
+			<latitude>45.57295478180439</latitude>
+			<altitude>0</altitude>
+			<heading>9.243279581943375</heading>
+			<tilt>0</tilt>
+			<range>8125926.696435873</range>
+			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+		</LookAt>
+		<Icon>
+			<href>http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_airsnrt?VERSION=1.1.1&amp;REQUEST=GetMap&amp;SRS=EPSG:4326&amp;WIDTH=1000&amp;HEIGHT=1000&amp;LAYERS=AIRS_Precip_D-1day&amp;TRANSPARENT=TRUE&amp;FORMAT=image/png&amp;</href>
+			<viewRefreshMode>onStop</viewRefreshMode>
+		</Icon>
+		<LatLonBox>
+			<north>90</north>
+			<south>-25.58439060150198</south>
+			<east>180</east>
+			<west>-180</west>
+		</LatLonBox>
+	</GroundOverlay>
+</Folder>
+</kml>

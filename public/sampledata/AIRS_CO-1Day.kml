@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Folder>
+	<name>AIRS CO -1Day</name>
+	<open>1</open>
+	<LookAt>
+		<longitude>-12.43426965531846</longitude>
+		<latitude>42.98073588778646</latitude>
+		<altitude>0</altitude>
+		<heading>5.664797790093138</heading>
+		<tilt>0</tilt>
+		<range>10670835.03267729</range>
+		<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+	</LookAt>
+	<GroundOverlay>
+		<name>AIRS CO A, -1Day</name>
+		<Icon>
+			<href>http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_airsnrt?VERSION=1.1.1&amp;REQUEST=GetMap&amp;SRS=EPSG:4326&amp;WIDTH=1512&amp;HEIGHT=1512&amp;LAYERS=AIRS_CO_A-1Day&amp;TRANSPARENT=TRUE&amp;FORMAT=image/gif&amp;</href>
+			<viewRefreshMode>onStop</viewRefreshMode>
+		</Icon>
+		<LatLonBox>
+			<north>90</north>
+			<south>-28.66490174069149</south>
+			<east>180</east>
+			<west>-180</west>
+		</LatLonBox>
+	</GroundOverlay>
+	<GroundOverlay>
+		<name>AIRS CO D, -1Day</name>
+		<Icon>
+			<href>http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_airsnrt?VERSION=1.1.1&amp;REQUEST=GetMap&amp;SRS=EPSG:4326&amp;WIDTH=1512&amp;HEIGHT=1512&amp;LAYERS=AIRS_CO_D-1Day&amp;TRANSPARENT=TRUE&amp;FORMAT=image/gif&amp;</href>
+			<viewRefreshMode>onStop</viewRefreshMode>
+		</Icon>
+		<LatLonBox>
+			<north>90</north>
+			<south>-28.66490174069149</south>
+			<east>180</east>
+			<west>-180</west>
+		</LatLonBox>
+	</GroundOverlay>
+</Folder>
+</kml>
