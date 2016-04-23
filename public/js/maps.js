@@ -1,204 +1,4 @@
-var map,
-    styleSheet;
-
-styleSheet = [
-    {
-        "featureType": "water",
-        "stylers": [
-            {
-                "color": "#19a0d8"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative",
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                "color": "#ffffff"
-            },
-            {
-                "weight": 6
-            }
-        ]
-    },
-    {
-        "featureType": "administrative",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "color": "#e85113"
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "color": "#efe9e4"
-            },
-            {
-                "lightness": -40
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "color": "#efe9e4"
-            },
-            {
-                "lightness": -20
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                "lightness": 100
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "lightness": -100
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "labels.icon"
-    },
-    {
-        "featureType": "landscape",
-        "elementType": "labels",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape",
-        "stylers": [
-            {
-                "lightness": 20
-            },
-            {
-                "color": "#efe9e4"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape.man_made",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                "lightness": 100
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "lightness": -100
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "hue": "#11ff00"
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                "lightness": 100
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "labels.icon",
-        "stylers": [
-            {
-                "hue": "#4cff00"
-            },
-            {
-                "saturation": 58
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#f0e4d3"
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#efe9e4"
-            },
-            {
-                "lightness": -25
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#efe9e4"
-            },
-            {
-                "lightness": -10
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "labels",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            }
-        ]
-    }
-];
+var map;
 
 function initMap() {
     // Initialize the google maps with default settings
@@ -265,7 +65,6 @@ function initMap() {
             }));
 
             if (place.geometry.viewport) {
-                // Only geocodes have viewport.
                 bounds.union(place.geometry.viewport);
             } else {
                 bounds.extend(place.geometry.location);
@@ -274,10 +73,25 @@ function initMap() {
         map.fitBounds(bounds);
     });
 
-    var baseURL = 'https://airaroundme.herokuapp.com/',
-        url = baseURL + 'sampledata/AIRS_CO-1Day.kml';
+    /**
+     * Apply landmark files on the map
+     */
+    var baseURL = 'https://airaroundme.herokuapp.com/sampledata/';
 
-    applyMapLandmarks(url, map);
+    $.each(retrieveLandmarkFiles(), function(index, fileName) {
+        applyMapLandmarks(baseURL + fileName, map);
+    });
+}
+
+function retrieveLandmarkFiles() {
+    // TODO: Replace with an API call to retrieve the kml filenames
+    return [
+        'AIRS_CO-1Day.kml',
+        'AIRS_Dust-1Day.kml',
+        'AIRS_Precip-1Day.kml',
+        'AIRS_SO2-1Day.kml',
+        'Prata_SO2-1Day.kml'
+    ];
 }
 
 function applyMapLandmarks(url, map) {
