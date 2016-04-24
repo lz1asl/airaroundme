@@ -20,13 +20,14 @@ Severity.create(id: 2, label: 'Medium')
 Severity.create(id: 3, label: 'High')
 
 
+# extreme weather points
 def createReport(marker, reporttype)
   # e.g. "Cyclone Kerry : Largest-Eye 93.3 km (56 mi) on 21/2/1979
   name =  marker.xpath("locationName/text()").to_s
   value =  marker.xpath("/value/text()").to_s
   record = marker.xpath("recordCharacteristic/text()").to_s
   date =  marker.xpath("measureDate/text()").to_s
-  label = name + ': ' +  record + ' ' + value + ' on ' + date
+  label = 'Extreme climate : ' + name + ' has ' +  record + ' ' + value + ' on ' + date
   puts label
 
   Report.create(
@@ -37,7 +38,7 @@ def createReport(marker, reporttype)
   )
 end
 
-def importFile(file, reporttype)
+def importHistoricFile(file, reporttype)
   markers = Nokogiri::XML(File.open("public/sampledata/" + file)) do |config|
     config.strict.nonet
   end
@@ -46,15 +47,31 @@ def importFile(file, reporttype)
   end
 end
 
-importFile("cyclone.xml", "cyclone")
-importFile("rainfall.xml", "rainfall")
+importHistoricFile("cyclone.xml", "cyclone")
+importHistoricFile("rainfall.xml", "rainfall")
 
-importFile("temperature.xml", "temperature")
-importFile("tornado.xml", "tornado")
-importFile("wave.xml", "wave")
-importFile("wind.xml", "wind")
-
-
+importHistoricFile("temperature.xml", "temperature")
+importHistoricFile("tornado.xml", "tornado")
+importHistoricFile("wave.xml", "wave")
+importHistoricFile("wind.xml", "wind")
 
 
 
+# fire data
+markers = Nokogiri::XML(File.open("public/sampledata/MODIS_C6_Europe_24h.kml")) do |config|
+  config.strict.nonet
+end
+markers.xpath("//Placemarks/Placemark").each do |marker|
+
+  # puts marker
+  description =  marker.xpath("description/text()").to_s
+  latlons = marker.xpath("Point/coordinates/text()").to_s.strip!.split(',')
+
+  Report.create(
+      lat: latlons[1].to_f,
+      lon: latlons[0].to_f,
+      reporttype: 'fire',
+      note: description
+  )
+
+end

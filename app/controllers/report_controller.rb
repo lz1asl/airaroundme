@@ -42,8 +42,9 @@ class ReportController < ApplicationController
           marker[:icon] = 'water'
         when 'wind'
           marker[:icon] = 'caution'
+        when 'fire'
+          marker[:icon] = 'firedept'
       end
-      #firedept
 
       @markers << marker
     end
