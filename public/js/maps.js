@@ -3,7 +3,7 @@ var map;
 function initMap() {
     // Initialize the google maps with default settings
     map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 0, lng: 0},
+        center: {lat: 42.135, lng: 24.745},
         styles: styleSheet,
         zoom: 13,
         scrollwheel: false,
@@ -12,6 +12,12 @@ function initMap() {
 
     // Apply the search on zoom in and out
     google.maps.event.addListener(map, 'zoom_changed', function() {
+        // Call the search button to apply the markers
+        $("#search-button").click();
+    });
+
+    // Apply the search on zoom in and out
+    google.maps.event.addListener(map, 'dragend', function() {
         // Call the search button to apply the markers
         $("#search-button").click();
     });
@@ -63,8 +69,24 @@ function initMap() {
         // Call the search button to apply the markers
         $("#search-button").click();
     });
-
-    // Hide the map notifications
-    $("#map-warning-notification").hide();
-    $("#map-clean-notification").hide();
 }
+
+var options = ["user", "weather", "fire"];
+
+$('.dropdown-menu a').on('click', function(event) {
+
+    var $target = $( event.currentTarget ),
+        val = $target.attr( 'data-value' ),
+        $inp = $target.find( 'input' ),
+        idx;
+
+    if ( ( idx = options.indexOf( val ) ) > -1 ) {
+        options.splice( idx, 1 );
+        setTimeout( function() { $inp.prop( 'checked', false ) }, 0);
+    } else {
+        options.push( val );
+        setTimeout( function() { $inp.prop( 'checked', true ) }, 0);
+    }
+
+    return false;
+});

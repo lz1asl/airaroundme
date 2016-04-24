@@ -1,4 +1,8 @@
 $(document).ready(function() {
+    // Hide the map notifications
+    $("#map-warning-notification").hide();
+    $("#map-clean-notification").hide();
+
     // Search on the map
     $("#search-button").click(function(e) {
         var bounds = map.getBounds();
@@ -22,7 +26,8 @@ $(document).ready(function() {
         var body = {
             lat: map.center.lat(),
             lon: map.center.lng(),
-            radius: radius
+            radius: radius,
+            types: options
         };
 
         e.preventDefault();
