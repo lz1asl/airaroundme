@@ -12,9 +12,14 @@ class ReportController < ApplicationController
     filter = ActiveSupport::JSON.decode request.body.string
     radius = filter['radius']
     origin = [filter['lat'], filter['lon']]
-    @reports = Report.within(radius, origin: origin)
+    query = Report.within(radius, origin: origin)
 
-    # TODO filter by severity and sympthoms
+    unless filter['types'].blank?
+      query = query.where(reporttype: filter['types'].to_a)
+    end
+    @reports = query.all
+
+    # TODO filter by severity, sympthoms, type
     @markers = []
     @reports.each do |report|
       title = report.note
