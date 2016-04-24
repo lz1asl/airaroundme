@@ -1,4 +1,4 @@
-var searchData = function (e) {
+var searchData = function () {
     var bounds = map.getBounds();
 
     var center = bounds.getCenter();
@@ -23,8 +23,6 @@ var searchData = function (e) {
         radius: radius,
         types: options
     };
-
-    e.preventDefault();
 
     $.ajax({
         url: "reports/search",
@@ -78,5 +76,8 @@ $(document).ready(function() {
     $("#map-clean-notification").hide();
 
     // Search on the map
-    $("#search-button").click(searchData);
+    $("#search-button").click(function(e){
+        e.preventDefault();
+        searchData();
+    });
 });
