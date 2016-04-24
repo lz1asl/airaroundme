@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Air Around Me</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#top">
+                    Air Around Me
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden active">
+                        <a href="#top"></a>
+                    </li>
+                    <li class="">
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li class="">
+                        <a class="page-scroll" href="#airaroudyou">Air Aroud You</a>
+                    </li>
+                    <li class="">
+                        <a class="page-scroll" href="#symptom">Put Your Simptom</a>
+                    </li>
+                    <li class="">
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1><img src="img/logo.png" alt="" /></h1>
+            <!-- <h3>Drink More Water</h3> -->
+            <br>
+            <!-- <a href="#about" class="btn btn-dark btn-lg">Find Out More</a> -->
+            <a href="#about" class="btn-arrow btn-circle page-scroll">
+                <i class="fa fa-angle-double-down animated"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Air Around Me</h2>
+                    <p class="lead">Combining Nasa, meteo and croud sourced information to check .<a href="#contact">the air conditions around me</a>.</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Map -->
+    <section id="airaroudyou" class="map">
+
+        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+        <div id="map"></div>
+    </section>
+
+    <!-- Callout -->
+    <!-- <aside class="callout">
+        <div class="text-vertical-center">
+            <h1>Vertically Centered Text</h1>
+        </div>
+    </aside> -->
+
+    <!-- Map -->
+    <section id="symptom" class="map">
+        <form method="post" action="">
+            <label for="from">Your name:</label>
+            <input type="text" id="from" />
+
+            <label for="note">Comment:</label>
+            <input type="text" id="note" />
+
+            <label for="symptoms">Symptom:</label>
+            <select class="combobox input-lg" id="symptoms">
+                <option value="" selected>Select a symptom</option>
+            </select>
+
+            <label for="severities">Severity:</label>
+            <select class="combobox input-lg" id="severities">
+                <option value="" selected>Select severity</option>
+            </select>
+
+            <button id="report-button">Report</button>
+        </form>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <!-- <h4><strong>Start Bootstrap</strong> -->
+                    </h4>
+                    <!-- <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p> -->
+                    <!-- <ul class="list-unstyled">
+                        <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
+                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a>
+                        </li>
+                    </ul> -->
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <!-- <p class="text-muted">Copyright &copy; Your Website 2014</p> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/map_styles.js"></script>
+    <script src="js/maps.js"></script>
+    <script src="js/report-form.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAixmsEVXEl18PSOHuC6HHKnxG6SaVxll0&libraries=places&callback=initMap" async defer></script>
+
+    <!-- Main  -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

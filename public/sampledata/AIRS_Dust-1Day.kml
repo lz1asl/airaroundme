@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<GroundOverlay>
+	<name>AISR Dust Score, Yesterday</name>
+	<LookAt>
+		<longitude>6.623992368114607</longitude>
+		<latitude>12.72958097454586</latitude>
+		<altitude>0</altitude>
+		<heading>-2.341464208139886</heading>
+		<tilt>0</tilt>
+		<range>10675936.76995601</range>
+		<altitudeMode>relativeToGround</altitudeMode>
+		<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+	</LookAt>
+	<Icon>
+		<href>http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_airsnrt?VERSION=1.1.1&amp;REQUEST=GetMap&amp;SRS=EPSG:4326&amp;WIDTH=1512&amp;HEIGHT=1512&amp;LAYERS=AIRS_Dust-1day&amp;TRANSPARENT=TRUE&amp;FORMAT=image/png&amp;</href>
+		<viewRefreshMode>onStop</viewRefreshMode>
+	</Icon>
+	<LatLonBox>
+		<north>83.84962307791072</north>
+		<south>-58.73304436676077</south>
+		<east>83.13291395926396</east>
+		<west>-69.88702410177531</west>
+	</LatLonBox>
+</GroundOverlay>
+</kml>

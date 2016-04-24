@@ -1,0 +1,17 @@
+/* Google Maps related style */
+#map {
+    height: 100%;
+}
+
+#pac-input {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 5px 16px;
+    text-overflow: ellipsis;
+    width: 37%;
+    margin-top: 9px;
+}
+
+#pac-input:focus {
+    border-color: #4d90fe;
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Folder>
+	<name>AIRS SO2, -1Day</name>
+	<open>1</open>
+	<GroundOverlay>
+		<name>AIRS SO2 A, -1 Day</name>
+		<Icon>
+			<href>http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_airsnrt?VERSION=1.1.1&amp;REQUEST=GetMap&amp;SRS=EPSG:4326&amp;WIDTH=1512&amp;HEIGHT=1512&amp;LAYERS=AIRS_SO2_A-1day&amp;TRANSPARENT=TRUE&amp;FORMAT=image/gif&amp;</href>
+			<viewRefreshMode>onStop</viewRefreshMode>
+		</Icon>
+		<LatLonBox>
+			<north>90</north>
+			<south>-51.00654094912771</south>
+			<east>180</east>
+			<west>-180</west>
+		</LatLonBox>
+	</GroundOverlay>
+	<GroundOverlay>
+		<name>AIRS SO2 D, -1 Day</name>
+		<Icon>
+			<href>http://disc1.sci.gsfc.nasa.gov/daac-bin/wms_airsnrt?VERSION=1.1.1&amp;REQUEST=GetMap&amp;SRS=EPSG:4326&amp;WIDTH=1512&amp;HEIGHT=1512&amp;LAYERS=AIRS_SO2_D-1day&amp;TRANSPARENT=TRUE&amp;FORMAT=image/gif&amp;</href>
+			<viewRefreshMode>onStop</viewRefreshMode>
+		</Icon>
+		<LatLonBox>
+			<north>90</north>
+			<south>-51.00654094912771</south>
+			<east>180</east>
+			<west>-180</west>
+		</LatLonBox>
+	</GroundOverlay>
+</Folder>
+</kml>
