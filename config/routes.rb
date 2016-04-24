@@ -62,6 +62,6 @@ Rails.application.routes.draw do
   get 'reports' => 'report#list'
 
   post 'report' => 'report#create'
-  post 'report/search' => 'report#search'
+  post 'reports/search' => 'report#search'
 
 end
