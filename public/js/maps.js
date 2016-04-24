@@ -89,8 +89,11 @@ $('.dropdown-menu a').on('click', function(event) {
     }
 
     $(event.target).blur();
-    // Call the search button to apply the markers
-    $("#search-button").click();
 
     return false;
+});
+
+$('#filter-dropdown').on('blur', function(event) {
+    // Call the search button to apply the markers
+    $("#search-button").click();
 });
