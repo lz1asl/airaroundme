@@ -121,7 +121,7 @@ body {
 }
 /* Custom Button Styles */
 
-.btn-dark {
+/*.btn-dark {
     border-radius: 0;
     color: #fff;
     background-color: rgba(0,0,0,0.4);
@@ -145,7 +145,7 @@ body {
 .btn-light:active {
     color: #333;
     background-color: rgba(255,255,255,0.8);
-}
+}*/
 
 /* Custom Horizontal Rule */
 
@@ -154,7 +154,7 @@ hr.small {
 }
 
 /* Side Menu */
-
+/*
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
@@ -169,9 +169,9 @@ hr.small {
     -ms-transition: all 0.4s ease 0s;
     -o-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
-}
+}*/
 
-.sidebar-nav {
+/*.sidebar-nav {
     position: absolute;
     top: 0;
     width: 250px;
@@ -215,9 +215,9 @@ hr.small {
 .sidebar-nav > .sidebar-brand a:hover {
     color: #fff;
     background: none;
-}
+}*/
 
-#menu-toggle {
+/*#menu-toggle {
     z-index: 1;
     position: fixed;
     top: 0;
@@ -236,20 +236,16 @@ hr.small {
 
 .toggle {
     margin: 5px 5px 0 0;
-}
+}*/
 
-/* Header */
-
-.header {
-    display: table;
+.navbar-toggle {
     position: relative;
-    width: 100%;
-    height: 100%;
-    background: url(../img/bg1.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    float: right;
+    margin: 7px 14px;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    padding: 0 10px;
 }
 
 .navbar-custom {
@@ -262,7 +258,8 @@ hr.small {
 
 .navbar-custom .navbar-brand {
     font-weight: 700;
-    padding: 5px 15px;
+    padding: 17px 0 0 78px;
+    position: relative;
 }
 
 .navbar-custom .navbar-brand:focus {
@@ -292,7 +289,8 @@ hr.small {
 
 .navbar-custom .nav li a:hover {
     outline: 0;
-    color: rgba(255,255,255,.8);
+    /*color: rgba(255,255,255,.8);*/
+    font-weight: bold;
     background-color: transparent;
 }
 
@@ -313,12 +311,25 @@ hr.small {
 .navbar-custom .nav li.active a:hover {
     color: #000;
 }
-
-.navbar-brand .small-logo {
+.navbar-nav>li>a {
+    padding-top: 18px;
+}
+.navbar-brand {
+    padding-left: 40px;
+}
+.navbar-brand:before {
+    content:"";
+    width: 60px;
+    position: absolute;
+    top: 8px;
+    left: 10px;
     height: 40px;
-    padding: 5px;
-    display: inline-block;
-    border: 1px solid #000;
+    background: url(../img/logo_small.png) no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.navbar-brand.page-scroll {
+    color: #0F5CBB;
 }
 
 @media(min-width:768px) {
@@ -339,16 +350,18 @@ hr.small {
         box-shadow: 0 0 5px rgba(0,0,0,0.5);
         -moz-box-shadow: 0 0 5px rgba(0,0,0,0.5);
         -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
-
     }
 
-    .navbar-custom.top-nav-collapse .small-logo {
-        border: 1px solid #fff;
-        background-color: rgba(255, 255, 255, 0.5);
-    }
-    .navbar-custom.top-nav-collapse a{
+    .navbar-custom.top-nav-collapse a {
         color: #fff;
     }
+
+    .navbar-custom.top-nav-collapse .navbar-brand:before {
+        background: url(../img/logo_small_white.png) no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+
 }
 
 @media(max-width: 768px) {
@@ -357,14 +370,39 @@ hr.small {
         color: #fff;
     }
     .navbar-toggle {
-        color: #fff;
+        font-size: 30px;
     }
     .navbar-custom {
-
         box-shadow: 0 0 5px rgba(0,0,0,0.5);
         -moz-box-shadow: 0 0 5px rgba(0,0,0,0.5);
         -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
     }
+
+    .navbar-custom .navbar-brand:before {
+        background: url(../img/logo_small_white.png) no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    .map {
+        height: 75%;
+    }
+    .navbar-brand.page-scroll {
+        color: #fff;
+    }
+}
+
+/* Header */
+
+.header {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../img/bg1.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 
 /* About */
@@ -429,12 +467,6 @@ hr.small {
 
 .map {
     height: 500px;
-}
-
-@media(max-width:768px) {
-    .map {
-        height: 75%;
-    }
 }
 
 /* Footer */
