@@ -13,15 +13,27 @@ class ReportController < ApplicationController
     origin = [filter['lat'], filter['lon']]
     @reports = Report.within(radius, origin: origin)
 
-    # TODO filter by severity and sympthom
+    # TODO filter by severity and sympthoms
 
+=begin
     @hash = Gmaps4rails.build_markers(@reports) do |report, marker|
       marker.lat report.lat
       marker.lng report.lon
       marker.title report.note
+
+
+      case report.severity_id
+        when 1
+          marker.icon = 'ylw_circle'
+        when 2
+          marker.icon = 'orange_circle'
+        when 3
+          marker.icon = 'red_diamond'
+      end
     end
 
     render json: @hash
+=end
   end
 
 
