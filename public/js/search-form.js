@@ -44,7 +44,7 @@ $(document).ready(function() {
                             lng: landmark.lng
                         },
                         map: map,
-                        icon: landmark.icon
+                        icon: 'http://maps.google.com/mapfiles/ms/icons/' + landmark.icon + '.png'
                     });
 
                     marker.addListener('click', function() {
