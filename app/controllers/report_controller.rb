@@ -17,6 +17,12 @@ class ReportController < ApplicationController
     unless filter['types'].blank?
       query = query.where(reporttype: filter['types'].to_a)
     end
+
+    unless filter['recent'].blank?
+      numDaysBack = filter['recent'].to_i
+      query = query.where(created_at: [Time.now - numDaysBack.days..Time.now])
+    end
+
     @reports = query.all
 
     # TODO filter by severity, sympthoms, type

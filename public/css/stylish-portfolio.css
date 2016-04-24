@@ -383,6 +383,9 @@ hr.small {
     .page-scroll span {
         display: none;
     }
+    body .symptom-form {
+        width: 90%;
+    }
 
 
 
@@ -474,7 +477,7 @@ hr.small {
 /* Map */
 
 .map {
-    height: 550px;
+    height: 650px;
     position: relative;
 }
 .map .hidden {
