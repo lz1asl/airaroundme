@@ -3,8 +3,8 @@ $(document).ready(function() {
     $("#map-warning-notification").hide();
     $("#map-clean-notification").hide();
 
-    // Search on the map
-    $("#search-button").click(function(e) {
+
+    var searchData = function (e) {
         var bounds = map.getBounds();
 
         var center = bounds.getCenter();
@@ -75,5 +75,8 @@ $(document).ready(function() {
                 console.error('Cannot load the symptoms options: ' + JSON.parse(json))
             }
         });
-    });
+    };
+
+    // Search on the map
+    $("#search-button").click(searchData);
 });
