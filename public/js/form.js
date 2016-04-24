@@ -45,9 +45,7 @@ $(document).ready(function() {
         $.ajax({
             url: "/report",
             type: "POST",
-            data: {
-                body: JSON.stringify(body)
-            },
+            data: JSON.stringify(body),
             success:function(result) {
                 $("sharelink").html(result);
             }
