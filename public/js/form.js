@@ -36,8 +36,8 @@ $(document).ready(function() {
             lon: map.center.lng(),
             from: $("#from").val(),
             note: $("#note").val(),
-            severity: $("#severities").val(),
-            sympthom: $("#symptoms").val()
+            severity: parseInt($("#severities").val()),
+            sympthom: parseInt($("#symptoms").val())
         };
 
         e.preventDefault();
@@ -46,7 +46,8 @@ $(document).ready(function() {
             url: "/report",
             type: "POST",
             data: JSON.stringify(body),
-            success:function(result) {
+            contentType: "application/json",
+            success: function(result) {
                 $("sharelink").html(result);
             }
         });
