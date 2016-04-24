@@ -29,6 +29,9 @@ $(document).ready(function() {
         }
     });
 
+    // Hide the notification initially
+    $("#report-submitted-notification").hide();
+
     // Submit the report
     $("#report-button").click(function(e) {
         var body = {
@@ -49,9 +52,9 @@ $(document).ready(function() {
             contentType: "application/json",
             success: function(result) {
                 $("#report-form").find("input, textarea, select").val("");
-                $("#notifcation-area").show();
+                $("#report-submitted-notification").show();
                 setTimeout(function() {
-                    $("#notifcation-area").hide();
+                    $("#report-submitted-notification").hide();
                 }, 2000);
             }
         });

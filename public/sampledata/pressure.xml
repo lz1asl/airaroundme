@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<markers>
+        <marker lat="66.8833" lng="93.4666">
+	  <recordType level="high">
+	  	<type>Global</type>
+  	</recordType>
+	<recordCharacteristic>Highest Pressure (Below 750m)</recordCharacteristic>
+	<record_links>
+		<link name="Global">http://wmo.asu.edu/world-highest-sea-level-air-pressure-below-700m</link>
+	</record_links>
+	<value>1083.3 hPa</value>
+	<measureDate>13/12/1968</measureDate>
+	<observations>1961-present</observations>
+	<locationName>Agata, Evenhiyskiy, Russia</locationName>
+	<elevation>261m (856.3ft)</elevation>
+	</marker>
+	<marker lat="16.7333" lng="137.7666">
+	<recordCharacteristic>Lowest Pressure</recordCharacteristic>
+	  <recordType level="low">
+	  	<type>Global</type>
+  	</recordType>
+	<record_links>
+		<link name="Global">http://wmo.asu.edu/world-lowest-sea-level-air-pressure-excluding-tornadoes</link>
+	</record_links>
+	<value>870 hPa</value>
+	<measureDate>12/10/1970</measureDate>
+	<observations>1951-present</observations>
+	<locationName>Pressure Estimated in Eye of Typhoon Tip</locationName>
+	<elevation>0m</elevation>
+	</marker>
+        <marker lat="48.73" lng="98.27">
+	<recordCharacteristic>Highest Pressure (Above 750m)</recordCharacteristic>
+	  <recordType level="high">
+	  	<type>Global</type>
+  	</recordType>
+	<record_links>
+		<link name="Global">http://wmo.asu.edu/highest-sea-lvl-pressure-above-700m</link>
+	</record_links>
+	<value>1089.1 hPa</value>
+	<measureDate>30/12/1970</measureDate>
+	<observations>1951-present</observations>
+	<locationName>Tosontsengel, Mongolia</locationName>
+	<elevation>0m</elevation>
+	</marker>
+</markers>

@@ -24,7 +24,7 @@ Severity.create(id: 3, label: 'High')
 def createReport(marker, reporttype)
   # e.g. "Cyclone Kerry : Largest-Eye 93.3 km (56 mi) on 21/2/1979
   name =  marker.xpath("locationName/text()").to_s
-  value =  marker.xpath("/value/text()").to_s
+  value =  marker.xpath("value/text()").to_s
   record = marker.xpath("recordCharacteristic/text()").to_s
   date =  marker.xpath("measureDate/text()").to_s
   label = 'Extreme climate : ' + name + ' has ' +  record + ' ' + value + ' on ' + date
@@ -49,11 +49,14 @@ end
 
 importHistoricFile("cyclone.xml", "cyclone")
 importHistoricFile("rainfall.xml", "rainfall")
-
 importHistoricFile("temperature.xml", "temperature")
 importHistoricFile("tornado.xml", "tornado")
 importHistoricFile("wave.xml", "wave")
 importHistoricFile("wind.xml", "wind")
+
+importHistoricFile("aridity.xml", "aridity")
+importHistoricFile("hail.xml", "hail")
+importHistoricFile("pressure.xml", "pressure")
 
 
 

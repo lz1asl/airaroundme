@@ -17,17 +17,18 @@ class ReportController < ApplicationController
     # TODO filter by severity and sympthoms
     @markers = []
     @reports.each do |report|
-      marker = { lat: report.lat, lng: report.lon, title: report.note}
-      case report.severity_id
-        when 1
-          marker[:icon] = 'yellow'
-        when 2
-          marker[:icon] = 'orange'
-        when 3
-          marker[:icon] = 'red'
+      title = report.note
+
+      unless (report.sympthom_id.blank?)
+        title += ', Reported: ' + Sympthom.find(report.sympthom_id).label
+      end
+      unless (report.severity_id.blank?)
+        title += ', Severity: ' + Severity.find(report.severity_id).label
       end
 
-      puts report.reporttype
+
+
+      marker = { lat: report.lat, lng: report.lon, title: title}
 
       case report.reporttype
         when 'cyclone'
@@ -44,6 +45,17 @@ class ReportController < ApplicationController
           marker[:icon] = 'caution'
         when 'fire'
           marker[:icon] = 'firedept'
+        else
+          marker[:icon] = 'caution' # also catches "aridity", "hail", "pressure"
+      end
+
+      case report.severity_id
+        when 1
+          marker[:icon] = 'yellow'
+        when 2
+          marker[:icon] = 'orange'
+        when 3
+          marker[:icon] = 'red'
       end
 
       @markers << marker
