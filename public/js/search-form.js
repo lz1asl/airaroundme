@@ -23,12 +23,11 @@ $(document).ready(function() {
         var radius = earthRadius * Math.acos(Math.sin(lat1) * Math.sin(lat2) +
                 Math.cos(lat1) * Math.cos(lat2) * Math.cos(lon2 - lon1));
 
-        var mapFilters = $('#map-filter');
-        debugger;
         var body = {
             lat: map.center.lat(),
             lon: map.center.lng(),
-            radius: radius
+            radius: radius,
+            types: options
         };
 
         e.preventDefault();
