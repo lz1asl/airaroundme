@@ -3,7 +3,7 @@ var map;
 function initMap() {
     // Initialize the google maps with default settings
     map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 0, lng: 0},
+        center: {lat: 42.135, lng: 24.745},
         styles: styleSheet,
         zoom: 13,
         scrollwheel: false,
