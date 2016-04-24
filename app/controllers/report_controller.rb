@@ -16,13 +16,13 @@ class ReportController < ApplicationController
 
     # TODO filter by severity and sympthoms
 
-=begin
     @hash = Gmaps4rails.build_markers(@reports) do |report, marker|
       marker.lat report.lat
       marker.lng report.lon
       marker.title report.note
 
 
+=begin
       case report.severity_id
         when 1
           marker.icon = 'ylw_circle'
@@ -31,10 +31,10 @@ class ReportController < ApplicationController
         when 3
           marker.icon = 'red_diamond'
       end
+=end
     end
 
     render json: @hash
-=end
   end
 
 
