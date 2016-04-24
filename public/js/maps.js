@@ -88,12 +88,5 @@ $('.dropdown-menu a').on('click', function(event) {
         setTimeout( function() { $inp.prop( 'checked', true ) }, 0);
     }
 
-    $(event.target).blur();
-
     return false;
-});
-
-$('#filter-dropdown').on('blur', function(event) {
-    // Call the search button to apply the markers
-    $("#search-button").click();
 });
