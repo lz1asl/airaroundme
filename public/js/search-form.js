@@ -34,14 +34,21 @@ $(document).ready(function() {
             contentType: "application/json",
             success: function(landmarks) {
                 $.each(landmarks, function (i, landmark) {
-                    new google.maps.Marker({
+                    var infoWindow = new google.maps.InfoWindow({
+                        content: landmark.title
+                    });
+
+                    var marker = new google.maps.Marker({
                         position: {
                             lat: landmark.lat,
                             lng: landmark.lng
                         },
                         map: map,
-                        title: landmark.marker_title,
                         icon: landmark.icon
+                    });
+
+                    marker.addListener('click', function() {
+                        infoWindow.open(map, marker);
                     });
                 });
 
