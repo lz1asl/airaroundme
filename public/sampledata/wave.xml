@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<markers>
+  <marker lat="57.50" lng="-12.7">
+  <recordType level="high">
+  	<type>Global</type>
+  </recordType>
+  <recordCharacteristic>World's Highest Significant Wave Height (by Ship Observation)</recordCharacteristic> 
+  <record_links>
+    	<link name="Global">http://wmo.asu.edu/world-highest-wave-shipobservation</link> 
+ </record_links>
+  <value>29.05 m (95.03 ft)</value> 
+   <measureDate>8/2/2000</measureDate> 
+   <observations>measured by British oceanographic vessel RRSDiscovery-present</observations> 
+   <locationName>north Atlantic</locationName> 
+   <elevation>0 m (0 ft)</elevation> 
+ </marker>
+
+   <marker lat="52.31" lng="-18.46">
+   <recordType level="high">
+   	<type>Global</type>
+   </recordType> 
+   <recordCharacteristic> World's Highest Significant Wave Height (by Buoy)</recordCharacteristic> 
+  <record_links>
+   <link name="Global">http://wmo.asu.edu/World-Highest-Wave-Buoy</link> 
+   </record_links>
+   <value>18.275 m (59.96 ft)</value> 
+   <measureDate>8/12/2007</measureDate> 
+   <observations></observations> 
+   <locationName>North Atlantic</locationName> 
+   <elevation>0 m (0 ft)</elevation> 
+  </marker>
+  
+ 
+  </markers>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<markers>
+  <marker lat="23.83" lng="90.08">
+  <recordType level="high">
+  	<type>Global</type>
+  </recordType>
+  <recordCharacteristic>World's Deadliest Single Tornado</recordCharacteristic> 
+  <record_links>
+    	<link name="Global">http://wmo.asu.edu/tornado-deadliest-single-tornado</link> 
+ </record_links>
+  <value>1,300 people</value> 
+   <measureDate>26/4/1989</measureDate> 
+   <observations>1091(first record of death by tornado)-present</observations> 
+   <locationName>Manikganj district, Bangladesh</locationName> 
+   <elevation>9m (30ft)</elevation> 
+ </marker>
+
+   <marker lat="37.23" lng="-90.97">
+   <recordType level="high">
+   	<type>Global</type>
+   </recordType> 
+   <recordCharacteristic>Longest-Lasting/Greatest Distance Travelled(single tornado)</recordCharacteristic> 
+  <record_links>
+   <link name="Global">http://wmo.asu.edu/tornado-longest-lasting-greatest-distance-traveled-single-tornado</link> 
+   </record_links>
+   <value>352.4 km (219 mi.) / 3.5 hours duration</value> 
+   <measureDate>18/3/1925</measureDate> 
+   <observations></observations> 
+   <locationName>Ellington, Missouri to Princeton Indiana</locationName> 
+   <elevation></elevation> 
+  </marker>
+  
+  <marker lat="39.00" lng="-98.00">
+   <recordType level="high">
+      	<type>Global</type>
+    </recordType>
+    <recordCharacteristic>Biggest (Numerical) Tornado Outbreak </recordCharacteristic> 
+    <record_links>
+    	<link name="Global">http://wmo.asu.edu/tornado-largest-tornado-outbreak</link> 
+    </record_links>
+    <value>148 tornadoes in a 24-hour period</value> 
+    <measureDate>3-4/4/1974</measureDate> 
+    <observations>1787-present</observations> 
+    <locationName>Central United States (13 states)</locationName> 
+    <elevation></elevation> 
+    </marker>  
+  
+  <marker lat="40.57" lng="-96.78">
+     <recordType level="high">
+      <type>Global</type>
+      </recordType>
+      <recordCharacteristic>Widest Tornado (maximum diameter)</recordCharacteristic> 
+      <record_links> 
+      	<link name="Global">http://wmo.asu.edu/tornado-widest-tornado-maximum-diameter</link> 
+      </record_links>
+      <value>Nearly 4000m (2.5mi) in width</value> 
+      <measureDate>22/5/2004</measureDate> 
+      <observations>1950-present</observations> 
+      <locationName>Hallam, Nebraska </locationName> 
+      <elevation>151m (1480ft)</elevation> 
+    </marker>
+    
+       <marker lat="41.00" lng="-95.00">
+       <recordType level="high">
+        <type>Global</type>
+        </recordType>
+        <recordCharacteristic>Calendar Month with Greatest Number of Tornados</recordCharacteristic> 
+        <record_links>
+        <link name="Global">http://wmo.asu.edu/tornado-calendar-month-greatest-number-tornadoes</link> 
+        </record_links>
+        <value>543 tornadoes</value> 
+        <measureDate>5/2003</measureDate> 
+        <observations>1950- present</observations> 
+        <locationName>United States</locationName> 
+        <elevation></elevation> 
+    </marker>
+    
+    <marker lat="35.23" lng="-97.73">
+        <recordType level="high">
+        <type>Global</type>
+        </recordType> 
+        <recordCharacteristic>Highest Recorded Tornadic Wind Speed</recordCharacteristic> 
+        <record_links> 
+        <link name="Global">http://wmo.asu.edu/tornado-highest-recorded-wind-speed-tornado-doppler-radar</link> 
+        </record_links>
+        <value>135 m/s (302 mph)</value> 
+        <measureDate>3/5/1999</measureDate> 
+        <observations>~1996-present</observations> 
+        <locationName>Bridge Creek Oklahoma </locationName> 
+        <elevation>416 m (1365 ft)</elevation> 
+    </marker>
+    
+    <marker lat="39.43" lng="-99.23">
+       <recordType level="high">
+        <type>Global</type>
+        </recordType> 
+        <recordCharacteristic>Longest Tornado Transport</recordCharacteristic> 
+        <record_links>
+        <link name="Global">http://wmo.asu.edu/tornado-longest-tornado-transport</link> 
+        </record_links>
+        <value>359 km (223 mi)</value> 
+        <measureDate>11/4/1991</measureDate> 
+        <observations>1871-present</observations> 
+        <locationName>Stockton Kansas to Winnetoon Nebraska</locationName> 
+        <elevation></elevation> 
+  </marker>
+  
+  </markers>
