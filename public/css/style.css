@@ -39,3 +39,36 @@
     margin: 0 auto;
     padding: 10px 20px;
 }
+.absolute-filter {
+    position: absolute;
+    right: 7px;
+    top: 8px;
+    z-index: 2;
+}
+.absolute-filter .btn {
+    direction: ltr;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    color: rgb(86, 86, 86);
+    font-family: Roboto, Arial, sans-serif;
+    -webkit-user-select: none;
+    font-size: 13px;
+    padding: 8px;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    -webkit-background-clip: padding-box;
+    box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
+    border-left-width: 0px;
+    min-width: 39px;
+    background-color: rgb(255, 255, 255);
+    background-clip: padding-box;
+}
+.absolute-filter .dropdown-menu {
+    right: 0;
+    left: auto;
+}
+.absolute-filter .small {
+    outline: 0;
+    font-size: 13px;    
+}

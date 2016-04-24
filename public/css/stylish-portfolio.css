@@ -472,6 +472,10 @@ hr.small {
 
 .map {
     height: 550px;
+    position: relative;
+}
+.map .hidden {
+    display: none;
 }
 
 /* Footer */
