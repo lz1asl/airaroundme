@@ -1,5 +1,7 @@
 $(document).ready(function() {
-
+    // Hide the map notifications
+    // $("#map-warning-notification").hide();
+    // $("#map-clean-notification").hide();
 
     // Search on the map
     $("#search-button").click(function(e) {
@@ -37,14 +39,14 @@ $(document).ready(function() {
             success: function(landmarks) {
                 // Update map notification
                 if(landmarks.length > 0) {
-                    $("#map-warning-notification").css("opacity", 1);
+                    $("#map-warning-notification").show();
                     setTimeout(function() {
-                        $("#map-warning-notification").css("opacity", 0);
+                        $("#map-warning-notification").hide();
                     }, 5000);
                 } else {
-                    $("#map-clean-notification").css("opacity", 1);
+                    $("#map-clean-notification").show();
                     setTimeout(function() {
-                        $("#map-clean-notification").css("opacity", 0);
+                        $("#map-clean-notification").hide();
                     }, 5000);
                 }
 
