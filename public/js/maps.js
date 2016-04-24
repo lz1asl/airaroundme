@@ -10,6 +10,12 @@ function initMap() {
         mapTypeId: google.maps.MapTypeId.TERRAIN
     });
 
+    // Apply the search on zoom in and out
+    google.maps.event.addListener(map, 'zoom_changed', function() {
+        // Call the search button to apply the markers
+        $("#search-button").click();
+    });
+
     // Set the center of the map to the geolocation if allowed by the browser
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
