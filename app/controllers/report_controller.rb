@@ -29,14 +29,6 @@ class ReportController < ApplicationController
 
 
       marker = { lat: report.lat, lng: report.lon, title: title}
-      case report.severity_id
-        when 1
-          marker[:icon] = 'yellow'
-        when 2
-          marker[:icon] = 'orange'
-        when 3
-          marker[:icon] = 'red'
-      end
 
       case report.reporttype
         when 'cyclone'
@@ -54,7 +46,16 @@ class ReportController < ApplicationController
         when 'fire'
           marker[:icon] = 'firedept'
         else
-          marker[:icon] = 'caution'
+          marker[:icon] = 'caution' # also catches "aridity", "hail", "pressure"
+      end
+
+      case report.severity_id
+        when 1
+          marker[:icon] = 'yellow'
+        when 2
+          marker[:icon] = 'orange'
+        when 3
+          marker[:icon] = 'red'
       end
 
       @markers << marker

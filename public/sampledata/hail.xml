@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<markers>
+  <marker lat="23.0000" lng="89.9333">
+  <recordType level="high">
+  	<type>Global</type>
+  </recordType>
+  <recordCharacteristic>Heaviest Hailstone</recordCharacteristic> 
+  <value>1.02kg(2.25lb)</value> 
+  <measureDate>14/5/1986</measureDate> 
+  <locationName>Gopalganj district, Bangladesh</locationName> 
+  <elevation>4m(13.1ft)</elevation>
+  <record_links>
+  	<link name="Global">"http://wmo.asu.edu/world-heaviest-hailstone"</link>
+  </record_links>
+  </marker>
+  </markers>
