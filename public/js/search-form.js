@@ -33,7 +33,17 @@ $(document).ready(function() {
             data: JSON.stringify(body),
             contentType: "application/json",
             success: function(result) {
-                debugger;
+                $.each(result, function (i, value) {
+                    new google.maps.Marker({
+                        position: {
+                            lat: value.lat,
+                            lng: value.lng
+                        },
+                        map: map,
+                        title: value.marker_title
+                    });
+                });
+
             }
         });
     });
