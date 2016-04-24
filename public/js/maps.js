@@ -64,33 +64,7 @@ function initMap() {
         $("#search-button").click();
     });
 
-    /**
-     * Apply landmark files on the map
-     */
-    var baseURL = 'https://airaroundme.herokuapp.com/sampledata/';
-
-/*    $.each(retrieveLandmarkFiles(), function(index, fileName) {
-        applyMapLandmarks(baseURL + fileName, map);
-    });*/
-}
-
-function retrieveLandmarkFiles() {
-    // TODO: Replace with an API call to retrieve the kml filenames
-    return [
-        'AIRS_CO-1Day.kml',
-        'AIRS_Dust-1Day.kml',
-        'AIRS_Precip-1Day.kml',
-        'AIRS_SO2-1Day.kml',
-        'Prata_SO2-1Day.kml'
-    ];
-}
-
-function applyMapLandmarks(url, map) {
-    var options = {
-        suppressInfoWindows: true,
-        preserveViewport: false,
-        map: map
-    };
-
-    var kmlLayer = new google.maps.KmlLayer(url, options);
+    // Hide the map notifications
+    $("#map-warning-notification").hide();
+    $("#map-clean-notification").hide();
 }
