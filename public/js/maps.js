@@ -5,7 +5,8 @@ function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 0, lng: 0},
         styles: styleSheet,
-        zoom: 10,
+        zoom: 13,
+        scrollwheel: false,
         mapTypeId: google.maps.MapTypeId.TERRAIN
     });
 
@@ -16,6 +17,9 @@ function initMap() {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             });
+
+            // Call the search button to apply the markers
+            $("#search-button").click();
         });
     }
 
@@ -39,31 +43,9 @@ function initMap() {
             return;
         }
 
-        // Clear out the old markers.
-        markers.forEach(function(marker) {
-            marker.setMap(null);
-        });
-        markers = [];
-
-        // For each place, get the icon, name and location.
+        // For each place get the bounds and set them
         var bounds = new google.maps.LatLngBounds();
         places.forEach(function(place) {
-            var icon = {
-                url: place.icon,
-                size: new google.maps.Size(71, 71),
-                origin: new google.maps.Point(0, 0),
-                anchor: new google.maps.Point(17, 34),
-                scaledSize: new google.maps.Size(25, 25)
-            };
-
-            // Create a marker for each place.
-            markers.push(new google.maps.Marker({
-                map: map,
-                icon: icon,
-                title: place.name,
-                position: place.geometry.location
-            }));
-
             if (place.geometry.viewport) {
                 bounds.union(place.geometry.viewport);
             } else {
@@ -71,6 +53,9 @@ function initMap() {
             }
         });
         map.fitBounds(bounds);
+
+        // Call the search button to apply the markers
+        $("#search-button").click();
     });
 
     /**

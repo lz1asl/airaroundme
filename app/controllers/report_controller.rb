@@ -1,8 +1,9 @@
 class ReportController < ApplicationController
 
+
   def list
     @reports =  Report.all
-    render json: @reports, :only => [:id, :lat, :lon, :from, :note, :severity_id, :sympthom_id]
+    render json: @reports, :only => [:id, :lat, :lon, :from, :note, :severity_id, :sympthom_id, :reporttype]
   end
 
 
@@ -13,31 +14,71 @@ class ReportController < ApplicationController
     origin = [filter['lat'], filter['lon']]
     @reports = Report.within(radius, origin: origin)
 
-    # TODO filter by severity and sympthom
+    # TODO filter by severity and sympthoms
+    @markers = []
+    @reports.each do |report|
+      marker = { lat: report.lat, lng: report.lon, title: report.note}
+      case report.severity_id
+        when 1
+          marker[:icon] = 'ylw_circle'
+        when 2
+          marker[:icon] = 'orange_circle'
+        when 3
+          marker[:icon] = 'red_diamond'
+      end
 
-    @hash = Gmaps4rails.build_markers(@reports) do |report, marker|
-      marker.lat report.lat
-      marker.lng report.lon
-      marker.title report.note
+      puts report.reporttype
+
+      case report.reporttype
+        when 'cyclone'
+          marker[:icon] = 'caution'
+        when 'rainfall'
+          marker[:icon] = 'rainy'
+        when 'temperature'
+          marker[:icon] = 'sunny'
+        when 'tornado'
+          marker[:icon] = 'thunderstorm'
+        when 'wave'
+          marker[:icon] = 'water'
+        when 'wind'
+          marker[:icon] = 'red_diamond'
+      end
+      #firedept
+
+      @markers << marker
     end
 
-    render json: @hash
+    render json: @markers
   end
 
 
   def create
-    report = ActiveSupport::JSON.decode request.body.string
-    @report = Report.new(
-        from: report['from'],
-        note: report['note'],
-        lat: report['lat'],
-        lon: report['lon']
-    )
 
-    @report.severity_id = report['severity'] unless report['severity'].blank?
-    @report.sympthom_id = report['sympthom'] unless report['sympthom'].blank?
+    begin
+      report = ActiveSupport::JSON.decode request.body.string
+      @report = Report.new(
+          from: report['from'],
+          note: report['note'],
+          lat: report['lat'],
+          lon: report['lon'],
+          reporttype: 'user'
+      )
 
-    @report.save
-    render json: @report, :only => [:id, :label]
+      @report.severity_id = report['severity'] unless report['severity'].blank?
+      @report.sympthom_id = report['sympthom'] unless report['sympthom'].blank?
+
+      @report.save
+      render json: @report, :only => [:id, :label]
+
+    rescue => e
+      puts e, e.backtrace
+      render nothing: true, status: 400
+    end
+  end
+
+  def handle_exception
+    puts e
   end
 end
+
+

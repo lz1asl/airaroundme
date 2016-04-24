@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<markers>
+ <marker lat="36.45" lng="-116.85">
+  <recordType level="high">
+   	<type>Global</type>
+   	<type>Hemisphere</type>
+   	<type>Continent</type>
+  </recordType>
+  <recordCharacteristic>Highest Temperature</recordCharacteristic>
+  <record_links>
+        <link name="Global">http://wmo.asu.edu/world-highest-temperature</link>
+   	<link name="Western Hemisphere">http://wmo.asu.edu/western-hemisphere-highest-temperature</link> 
+	<link name="North American Continent">http://wmo.asu.edu/north-america-highest-temperature</link>
+  </record_links>
+  <value>56.7 C (134 F)</value> 
+ <measureDate>10/7/1913</measureDate> 
+ <observations>1911 - present</observations> 
+ <locationName>Furnace Creek Ranch, CA, USA</locationName> 
+ <elevation>-54m (-179ft)</elevation> 
+  </marker>
+<marker lat="-77.53" lng="106.67">
+  <recordType level="low">
+  	<type>Global</type>
+  	<type>Hemisphere</type>
+  	<type>Continent</type>
+ </recordType>
+ <recordCharacteristic>Lowest Temperature</recordCharacteristic> 
+ <record_links>
+ 	<link name="Global">http://wmo.asu.edu/world-lowest-temperature</link> 
+ 	<link name="Southern Hemisphere">http://wmo.asu.edu/southern-hemisphere-lowest-temperature</link> 
+ 	<link name="Eastern Hemisphere">http://wmo.asu.edu/eastern-hemisphere-lowest-temperature</link> 
+ 	<link name="WMO Region 7 (Antarctica)">http://wmo.asu.edu/antarctica-lowest-temperature</link> 
+ </record_links>
+ <value>-89.2 C (-128.5 F)</value> 
+ <measureDate>21/7/1983</measureDate> 
+ <observations>1912 - present</observations> 
+ <locationName>Vostok, Antarctica</locationName> 
+ <elevation>3420m (11,220 ft)</elevation> 
+ </marker>
+ 
+ <marker lat="-27.53" lng="135.43">
+   <recordType level="high">
+   	<type>Hemisphere</type>
+   	<type>Continent</type>
+ </recordType>
+ <recordCharacteristic>Highest Temperature</recordCharacteristic> 
+ <record_links>
+ 	<link name="Southern Hemisphere">http://wmo.asu.edu/southern-hemisphere-highest-temperature</link> 
+	<link name="WMO Region 5 (Southwest Pacific)">http://wmo.asu.edu/australia-highest-temperature</link>
+ </record_links>
+ <value>50.7 C (123 F)</value> 
+ <measureDate>2/1/1960</measureDate> 
+ <observations>59 years</observations> 
+ <locationName>Oodnadatta, Australia</locationName> 
+ <elevation>112m (367ft)</elevation> 
+ </marker>
+ 
+ <marker lat="-77.53" lng="106.67">
+  <recordType level="low">
+  	<type>Global</type>
+  	<type>Hemisphere</type>
+  	<type>Continent</type>
+ </recordType>
+ <recordCharacteristic>Lowest Temperature</recordCharacteristic> 
+ <record_links>
+ 	<link name="Global">http://wmo.asu.edu/world-lowest-temperature</link> 
+ 	<link name="Southern Hemisphere">http://wmo.asu.edu/southern-hemisphere-lowest-temperature</link> 
+ 	<link name="Eastern Hemisphere">http://wmo.asu.edu/eastern-hemisphere-lowest-temperature</link> 
+ 	<link name="WMO Region 7 (Antarctica)">http://wmo.asu.edu/antarctica-lowest-temperature</link> 
+ </record_links>
+ <value>-89.2 C (-128.5 F)</value> 
+ <measureDate>21/7/1983</measureDate> 
+ <observations>1912 - present</observations> 
+ <locationName>Vostok, Antarctica</locationName> 
+ <elevation>3420m (11,220 ft)</elevation> 
+ </marker>
+ 
+ <marker lat="33.7" lng="8.967">
+ <recordType level="high">
+   	<type>Continent</type>
+ </recordType>
+ <recordCharacteristic>Highest Temperature</recordCharacteristic> 
+ <record_links> 
+	 <link name="WMO Region 1 (Africa)">http://wmo.asu.edu/africa-highest-temperature</link>  
+ </record_links>
+ <value>55.0 C (131 F)</value> 
+ <measureDate>7/7/1931</measureDate> 
+ <observations>1956 - present</observations> 
+ <locationName>Kebili, Tunisia</locationName> 
+ <elevation>38.1m (125ft)</elevation> 
+ </marker>
+ 
+ <marker lat="63.47" lng="142.38">
+ <recordType level="low">
+   	<type>Hemisphere</type>
+   	<type>Continent</type>
+ </recordType>
+ <recordCharacteristic>Lowest Temperature</recordCharacteristic> 
+ <record_links> 
+ 	<link name="Northern Hemisphere">http://wmo.asu.edu/northern-hemisphere-lowest-temperature</link> 
+	<link name="WMO Region 2 (Asia)">http://wmo.asu.edu/asia-lowest-temperature</link>  
+ </record_links>
+ <value>-67.8 C (-90 F)</value> 
+ <measureDate>6/2/1933</measureDate> 
+ <observations>1956 - present</observations> 
+ <locationName>Oimekon, Russia</locationName> 
+ <elevation>800m (2625 ft)</elevation> 
+ </marker>
+ 
+ <marker lat="78.07" lng="-38.48">
+ <recordType level="low">
+   	<type>Hemisphere</type>
+ </recordType>
+ <recordCharacteristic>Lowest Temperature</recordCharacteristic> 
+ <record_links>
+ 	<link name="Western Hemisphere">http://wmo.asu.edu/western-hemisphere-lowest-temperature</link> 
+        <link name="WMO Region 6 (Europe)">http://wmo.asu.edu/wmo-region-6-lowest-temperature</link>  
+</record_links>
+ <value>-66.1 C (-87 F)</value> 
+ <measureDate>9/1/1954</measureDate> 
+ <observations>11/1952 - 6/1954</observations> 
+ <locationName>Northice, Greenland</locationName> 
+ <elevation>2341m (7680 ft)</elevation> 
+ </marker>
+
+ <marker lat="-33.18333" lng="-68.2">
+ <recordType level="high">
+   	<type>Continent</type>
+ </recordType>
+ <recordCharacteristic>Highest Temperature</recordCharacteristic>
+ <record_links>
+ 	<link name="WMO Region 3 (South America)">http://wmo.asu.edu/south-america-highest-temperature</link>
+ </record_links>
+ <value>48.9 C (120 F)</value>
+ <measureDate>11/12/1905</measureDate>
+ <observations></observations>
+ <locationName>Rivadavia, Argentina</locationName>
+ <elevation>668m (2192 ft)</elevation>
+ </marker>
+
+ <marker lat="38.1" lng="23.783333">
+ <recordType level="high">
+   	<type>Continent</type>
+ </recordType>
+ <recordCharacteristic>Highest Temperature</recordCharacteristic>
+ <record_links>
+ 	<link name="WMO Region 6 (Europe, continental)">http://wmo.asu.edu/europe-highest-temperature</link>
+ </record_links>
+ <value>48.0 C (118.4 F)</value>
+ <measureDate>10/07/1977</measureDate>
+ <observations>1956 - present</observations>
+ <locationName>Athens, Greece and Elefsina, Greece</locationName>
+ <elevation>236m (774 ft)</elevation>
+ </marker>
+
+ <marker lat="32.41667" lng="35.53333">
+ <recordType level="high">
+   	<type>Continent</type>
+        <type>Hemisphere</type>
+ </recordType>
+ <recordCharacteristic>Highest Temperature</recordCharacteristic>
+ <record_links>
+ 	<link name="WMO Region 6 (Europe)">http://wmo.asu.edu/wmo-region-6-highest-temperature</link>
+        <link name="Eastern Hemisphere">http://wmo.asu.edu/eastern-hemisphere-highest-temperature</link>
+ </record_links>
+ <value>53.9 C (129 F)</value>
+ <measureDate>21/06/1942</measureDate>
+ <observations></observations>
+ <locationName>Tirat Tsvi (Tirat Zevi) Israel</locationName>
+ <elevation> 220m ( 722 ft)</elevation>
+ </marker>
+ 
+ <marker lat="-77.5333" lng="161.66667">
+ <recordType level="high">
+   	<type>Continent</type>
+ </recordType>
+ <recordCharacteristic>Highest Temperature</recordCharacteristic>
+ <record_links>
+ 	<link name="WMO Region 7 (Antarctica)">http://wmo.asu.edu/antarctica-highest-temperature</link>
+ </record_links>
+ <value>15 C (59 F)</value>
+ <measureDate>01/05/1974</measureDate>
+ <observations></observations>
+ <locationName>Vanda Station, Antarctica</locationName>
+ <elevation>15m (49 ft)</elevation>
+ </marker>
+ 
+ <marker lat="62.43333" lng="-140.36667">
+ <recordType level="low">
+   	<type>Continent</type>
+ </recordType>
+ <recordCharacteristic>Lowest Temperature</recordCharacteristic>
+ <record_links>
+ 	<link name="WMO Region 4 (North America)">http://wmo.asu.edu/north-america-excluding-greenland-lowest-temperature</link>
+ </record_links>
+ <value> -63.0 C ( -81.4 F)</value>
+ <measureDate>02/03/1947</measureDate>
+ <observations>1943 - 1966</observations>
+ <locationName>Snag, Yukon Territory, Canada</locationName>
+ <elevation>646m (2120 ft)</elevation>
+ </marker>
+ 
+ <marker lat="-54.35" lng="-68.183333">
+ <recordType level="low">
+   	<type>Continent</type>
+ </recordType>
+ <recordCharacteristic>Lowest Temperature</recordCharacteristic>
+ <record_links>
+ 	<link name="WMO Region 3 (South America)">http://wmo.asu.edu/south-america-lowest-temperature</link>
+ </record_links>
+ <value> -32.8 C ( -27 F)</value>
+ <measureDate>01/06/1907</measureDate>
+ <observations></observations>
+ <locationName>Sarmiento, Argentina</locationName>
+ <elevation>268m (879 ft)</elevation>
+ </marker>
+ 
+ <marker lat="64.25" lng="57.75">
+ <recordType level="low">
+   	<type>Continent</type>
+ </recordType>
+ <recordCharacteristic>Lowest Temperature</recordCharacteristic>
+ <record_links>
+ 	<link name="WMO Region 6 (Europe, continental)">http://wmo.asu.edu/europe-lowest-temperature</link>
+ </record_links>
+ <value> -58.1 C ( -72.6 F)</value>
+ <measureDate>31/12/1978</measureDate>
+ <observations></observations>
+ <locationName>Ust 'Schugor, Russia</locationName>
+ <elevation>85m (279 ft)</elevation>
+ </marker>
+
+ <marker lat="33.5" lng="-5.1">
+ <recordType level="low">
+   	<type>Continent</type>
+ </recordType>
+ <recordCharacteristic>Lowest Temperature</recordCharacteristic>
+ <record_links>
+ 	<link name="WMO Region 1 (Africa)">http://wmo.asu.edu/africa-lowest-temperature</link>
+ </record_links>
+ <value> -23.9 C ( -11 F)</value>
+ <measureDate>11/02/1935</measureDate>
+ <observations>1912 - present</observations>
+ <locationName>Ifrane, Morocco</locationName>
+ <elevation>1635m (5364 ft)</elevation>
+ </marker>
+
+ <marker lat="-45.133333" lng="170.1000000">
+ <recordType level="low">
+    	<type>Continent</type>
+ </recordType>
+ <recordCharacteristic>Lowest Temperature</recordCharacteristic>
+ <record_links>
+ 	<link name="WMO Region 5 (Southwest Pacific)">http://wmo.asu.edu/wmo-region-5-lowest-temperature</link>
+ </record_links>
+ <value> -25.6 C ( -14.0 F)</value>
+ <measureDate>17/07/1903</measureDate>
+ <observations>1887-present</observations>
+ <locationName>Eweburn, Ranfurly, New Zealand</locationName>
+ <elevation>423m (1388 ft)</elevation>
+ </marker>
+
+<marker lat="-36.516667" lng="148.3166667">
+ <recordType level="low">
+    	<type>Continent</type>
+ </recordType>
+ <recordCharacteristic>Lowest Temperature</recordCharacteristic>
+ <record_links>
+ 	<link name="WMO Region 5 (Southwest Pacific, Australia)">http://wmo.asu.edu/australia-lowest-temperature</link>
+ </record_links>
+ <value> -23 C ( -9.4 F)</value>
+ <measureDate>29/06/1994</measureDate>
+ <observations></observations>
+ <locationName>Charlotte Pass, New South Wales</locationName>
+ <elevation>1755m (5758 ft)</elevation>
+ </marker>
+
+<marker lat="-77.5333" lng="106.6667">
+ <recordType level="low">
+    	<type>Continent</type>
+ </recordType>
+ <recordCharacteristic>Lowest Temperature</recordCharacteristic>
+ <record_links>
+ 	<link name="WMO Region 7 (Antarctica)">http://wmo.asu.edu/antarctica-lowest-temperature</link>
+ </record_links>
+ <value> -89.2 C (-129 F)</value>
+ <measureDate>21/7/1983</measureDate>
+ <observations>1912-present</observations>
+ <locationName>Vostok, Antarctica</locationName>
+ <elevation>3420m (11220 ft)</elevation>
+ </marker>
+ 
+ <marker lat="67.55" lng="133.383333">
+  <recordType level="low">
+     	<type>Continent</type>
+  </recordType>
+  <recordCharacteristic>Lowest Temperature</recordCharacteristic>
+  <record_links>
+  	<link name="WMO Region 2 (Asia)">http://wmo.asu.edu/asia-lowest-temperature</link>
+  </record_links>
+  <value> -67.8 C (-90 F)</value>
+  <measureDate>5/2/1892, 7/2/1892</measureDate>
+  <observations></observations>
+  <locationName>Verkhoyansk, Russia</locationName>
+  <elevation>1.107m (350 ft)</elevation>
+ </marker>
+ 
+ <marker lat="63.93333" lng="142.38333">
+   <recordType level="low">
+      	<type>Continent</type>
+   </recordType>
+   <recordCharacteristic>Lowest Temperature</recordCharacteristic>
+   <record_links>
+   	<link name="WMO Region 2 (Asia)">http://wmo.asu.edu/asia-lowest-temperature</link>
+   </record_links>
+   <value> -67.8 C (-90 F)</value>
+   <measureDate>6/2/1933</measureDate>
+   <observations></observations>
+   <locationName>Oimekon, Russia</locationName>
+   <elevation>2.800m (2625 ft)</elevation>
+ </marker>
+   </markers>

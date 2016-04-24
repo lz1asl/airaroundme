@@ -36,8 +36,8 @@ $(document).ready(function() {
             lon: map.center.lng(),
             from: $("#from").val(),
             note: $("#note").val(),
-            severity: $("#severities").val(),
-            sympthom: $("#symptoms").val()
+            severity: parseInt($("#severities").val()),
+            sympthom: parseInt($("#symptoms").val())
         };
 
         e.preventDefault();
@@ -45,13 +45,11 @@ $(document).ready(function() {
         $.ajax({
             url: "/report",
             type: "POST",
-            data: {
-                body: JSON.stringify(body)
-            },
-            success:function(result) {
+            data: JSON.stringify(body),
+            contentType: "application/json",
+            success: function(result) {
                 $("sharelink").html(result);
             }
         });
     });
-
 });
