@@ -15,26 +15,40 @@ class ReportController < ApplicationController
     @reports = Report.within(radius, origin: origin)
 
     # TODO filter by severity and sympthoms
-
-    @hash = Gmaps4rails.build_markers(@reports) do |report, marker|
-      marker.lat report.lat
-      marker.lng report.lon
-      marker.title report.note
-
-
-=begin
+    @markers = []
+    @reports.each do |report|
+      marker = { lat: report.lat, lng: report.lon, title: report.note}
       case report.severity_id
         when 1
-          marker.icon = 'ylw_circle'
+          marker[:icon] = 'ylw_circle'
         when 2
-          marker.icon = 'orange_circle'
+          marker[:icon] = 'orange_circle'
         when 3
-          marker.icon = 'red_diamond'
+          marker[:icon] = 'red_diamond'
       end
-=end
+
+      puts report.reporttype
+
+      case report.reporttype
+        when 'cyclone'
+          marker[:icon] = 'caution'
+        when 'rainfall'
+          marker[:icon] = 'rainy'
+        when 'temperature'
+          marker[:icon] = 'sunny'
+        when 'tornado'
+          marker[:icon] = 'thunderstorm'
+        when 'wave'
+          marker[:icon] = 'water'
+        when 'wind'
+          marker[:icon] = 'red_diamond'
+      end
+      #firedept
+
+      @markers << marker
     end
 
-    render json: @hash
+    render json: @markers
   end
 
 
