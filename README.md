@@ -7,4 +7,4 @@ Project hosting code for the https://2016.spaceappschallenge.org/challenges/eart
 Deployed at https://airaroundme.herokuapp.com/.
 
 
-Mobile clients repo : TODO
+Mobile clients repo : https://github.com/ivan3a/airAroundMeApp.git
