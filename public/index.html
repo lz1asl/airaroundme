@@ -16,6 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="css/combobox.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
@@ -87,7 +88,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Air Around Me</h2>
-                    <p class="lead">Combining Nasa, meteo and croud sourced information to check .<a href="#contact">the air conditions around me</a>.</p>
+                    <p class="lead">Combining Nasa, meteo and croud sourced information to check <a href="#contact">the air conditions around me</a>.</p>
                 </div>
             </div>
             <!-- /.row -->
@@ -98,7 +99,7 @@
     <!-- Map -->
     <section id="airaroudyou" class="map">
 
-        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+        <input id="pac-input" class="controls" type="text" placeholder="Find Your Place">
         <div id="map"></div>
     </section>
 
@@ -110,26 +111,40 @@
     </aside> -->
 
     <!-- Map -->
-    <section id="symptom" class="map">
-        <form method="post" action="">
-            <label for="from">Your name:</label>
-            <input type="text" id="from" />
+    <section id="symptom" class="symptom-form">
 
-            <label for="note">Comment:</label>
-            <input type="text" id="note" />
+        <h3>Put Your Symptom</h3>
+        <form method="post" action="" data-toggle="validator">
 
-            <label for="symptoms">Symptom:</label>
-            <select class="combobox input-lg" id="symptoms">
-                <option value="" selected>Select a symptom</option>
-            </select>
+            <div class="form-group">
+                <label for="form" class="control-label">Name</label>
+                <input type="text" class="form-control" id="form" placeholder="Name" data-error="Add your name, please." required>
+                <div class="help-block with-errors"></div>
+            </div>
 
-            <label for="severities">Severity:</label>
-            <select class="combobox input-lg" id="severities">
-                <option value="" selected>Select severity</option>
-            </select>
+            <div class="form-group">
+                <label for="note" class="control-label">Comment</label>
+                <textarea class="form-control" rows="3" cols="10" id="note" placeholder="Comment" data-error="Add your comment, please." required></textarea>
+                <div class="help-block with-errors"></div>
+            </div>
 
-            <button id="report-button">Report</button>
+            <div class="form-group">
+                <label for="symptoms">Symptom:</label>
+                <select class="form-control" id="symptoms">
+                    <option value="" selected="selected">Choose your symptom</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="severities">Severity:</label>
+                <select class="form-control" id="severities">
+                    <option value="" selected="selected">Select severity</option>
+                </select>
+            </div>
+
+            <button class="btn btn-default btn-center" type="submit" id="report-button">REPORT</button>
         </form>
+
     </section>
 
 
@@ -170,6 +185,8 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/validator.js"></script>
+    <script src="js/combobox.js"></script>
 
     <script src="js/map_styles.js"></script>
     <script src="js/maps.js"></script>

@@ -363,6 +363,9 @@ hr.small {
     }
 
 }
+.nav>li>a {
+    padding: 17px 6px;
+}
 
 @media(max-width: 768px) {
     .navbar-custom a,
@@ -377,6 +380,8 @@ hr.small {
         -moz-box-shadow: 0 0 5px rgba(0,0,0,0.5);
         -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
     }
+
+
 
     .navbar-custom .navbar-brand:before {
         background: url(../img/logo_small_white.png) no-repeat;
@@ -466,7 +471,7 @@ hr.small {
 /* Map */
 
 .map {
-    height: 500px;
+    height: 550px;
 }
 
 /* Footer */

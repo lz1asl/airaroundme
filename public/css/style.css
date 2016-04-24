@@ -4,14 +4,38 @@
 }
 
 #pac-input {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 300;
-    padding: 5px 16px;
+    padding: 7px 16px 6px;
     text-overflow: ellipsis;
     width: 37%;
-    margin-top: 9px;
+    margin-top: 10px;
+    outline: 0;
+    border: 0;
+    box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
+    border-radius: 2px;
 }
 
 #pac-input:focus {
     border-color: #4d90fe;
+}
+
+.symptom-form {
+    width: 40%;
+    margin: 0 auto;
+}
+.symptom-form .form-group {
+    margin-bottom: 10px;
+}
+.symptom-form label {
+    font-size: 15px;
+}
+.symptom-form h3 {
+    font-size: 30px;
+    text-align: center;
+}
+.symptom-form .btn-center {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
 }
