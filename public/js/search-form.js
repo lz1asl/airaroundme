@@ -1,7 +1,7 @@
 $(document).ready(function() {
     // Hide the map notifications
-    // $("#map-warning-notification").hide();
-    // $("#map-clean-notification").hide();
+    $("#map-warning-notification").hide();
+    $("#map-clean-notification").hide();
 
     // Search on the map
     $("#search-button").click(function(e) {
