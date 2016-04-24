@@ -90,3 +90,10 @@ $('.dropdown-menu a').on('click', function(event) {
 
     return false;
 });
+
+$('#filter-dropdown').on('blur', function(event) {
+    debugger;
+    if($('.dropdown-menu').visible(true)) {
+        $("#search-button").click();
+    }
+});
