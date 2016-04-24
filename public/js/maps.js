@@ -75,6 +75,7 @@ function initMap() {
 var options = [
     "user",
     "weather",
+    "fire",
     "cyclone",
     "rainfall",
     "temperature",
