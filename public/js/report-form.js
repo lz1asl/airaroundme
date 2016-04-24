@@ -29,6 +29,9 @@ $(document).ready(function() {
         }
     });
 
+    // Hide the notification initially
+    $("#report-submitted-notification").hide();
+
     // Submit the report
     $("#report-button").click(function(e) {
         var body = {
