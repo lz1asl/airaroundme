@@ -28,7 +28,7 @@ class ReportController < ApplicationController
 
 
 
-      marker = { lat: report.lat, lng: report.lon, title: title}
+      marker = { lat: report.lat, lng: report.lon, title: title, type: report.reporttype}
 
       case report.reporttype
         when 'cyclone'
