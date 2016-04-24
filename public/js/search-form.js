@@ -33,6 +33,19 @@ $(document).ready(function() {
             data: JSON.stringify(body),
             contentType: "application/json",
             success: function(landmarks) {
+                // Update map notification
+                if(landmarks.length > 0) {
+                    $("#map-warning-notification").show();
+                    setTimeout(function() {
+                        $("#map-warning-notification").hide();
+                    }, 5000);
+                } else {
+                    $("#map-clean-notification").show();
+                    setTimeout(function() {
+                        $("#map-clean-notification").hide();
+                    }, 5000);
+                }
+
                 $.each(landmarks, function (i, landmark) {
                     var infoWindow = new google.maps.InfoWindow({
                         content: landmark.title
