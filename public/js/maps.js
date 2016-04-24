@@ -43,13 +43,7 @@ function initMap() {
             return;
         }
 
-        // Clear out the old markers.
-        markers.forEach(function(marker) {
-            marker.setMap(null);
-        });
-        markers = [];
-
-        // For each place, get the icon, name and location.
+        // For each place get the bounds and set them
         var bounds = new google.maps.LatLngBounds();
         places.forEach(function(place) {
             if (place.geometry.viewport) {
