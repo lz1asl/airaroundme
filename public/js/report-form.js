@@ -48,7 +48,7 @@ $(document).ready(function() {
             data: JSON.stringify(body),
             contentType: "application/json",
             success: function(result) {
-                $(this).closest('form').find("input, textarea").val("");
+                $("#report-form").find("input, textarea").val("");
                 $("#notifcation-area").show();
             }
         });
