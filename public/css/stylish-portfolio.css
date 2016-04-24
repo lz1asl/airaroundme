@@ -380,6 +380,9 @@ hr.small {
         -moz-box-shadow: 0 0 5px rgba(0,0,0,0.5);
         -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
     }
+    .page-scroll span {
+        display: none;
+    }
 
 
 
