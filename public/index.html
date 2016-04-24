@@ -52,13 +52,13 @@
                         <a href="#top"></a>
                     </li>
                     <li class="">
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#about">About <span>|</span></a>
                     </li>
                     <li class="">
-                        <a class="page-scroll" href="#airaroudyou">Air Aroud You</a>
+                        <a class="page-scroll" href="#airaroudyou">Air Aroud You <span>|</span></a>
                     </li>
                     <li class="">
-                        <a class="page-scroll" href="#symptom">Put Your Simptom</a>
+                        <a class="page-scroll" href="#symptom">Put Your Simptom<span> |</span></a>
                     </li>
                     <li class="">
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -88,7 +88,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Air Around Me</h2>
-                    <p class="lead">Combining Nasa, meteo and croud sourced information to check <a href="#contact">the air conditions around me</a>.</p>
+                    <p class="lead">Combining NASA, meteo and croud sourced information to check <a href="#airaroudyou">the air conditions around me</a>.</p>
                 </div>
             </div>
             <!-- /.row -->
@@ -99,9 +99,22 @@
     <!-- Map -->
     <section id="airaroudyou" class="map">
 
-        <form method="post" action="">
+        <form method="post" action="" class="hidden">
             <button id="search-button">Search</button>
         </form>
+        <div class="button-group absolute-filter">
+            <button type="button" class="btn btn-sm dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-filter"></span> Filter <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="#" class="small" data-value="option1" tabIndex="-1">
+                        <input type="checkbox" />&nbsp;Option 1</a>
+                </li>
+                <li>
+                    <a href="#" class="small" data-value="option2" tabIndex="-1">
+                        <input type="checkbox" />&nbsp;Option 2</a>
+                </li>
+            </ul>
+        </div>
         <input id="pac-input" class="controls" type="text" placeholder="Find Your Place">
         <div id="map"></div>
     </section>
