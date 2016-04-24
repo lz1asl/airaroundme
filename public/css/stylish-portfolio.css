@@ -383,6 +383,9 @@ hr.small {
     .page-scroll span {
         display: none;
     }
+    body .symptom-form {
+        width: 90%;
+    }
 
 
 
