@@ -32,18 +32,22 @@ $(document).ready(function() {
             type: "POST",
             data: JSON.stringify(body),
             contentType: "application/json",
-            success: function(result) {
-                $.each(result, function (i, value) {
+            success: function(landmarks) {
+                $.each(landmarks, function (i, landmark) {
                     new google.maps.Marker({
                         position: {
-                            lat: value.lat,
-                            lng: value.lng
+                            lat: landmark.lat,
+                            lng: landmark.lng
                         },
                         map: map,
-                        title: value.marker_title
+                        title: landmark.marker_title,
+                        icon: landmark.icon
                     });
                 });
 
+            },
+            failure: function(json) {
+                console.error('Cannot load the symptoms options: ' + JSON.parse(json))
             }
         });
     });
