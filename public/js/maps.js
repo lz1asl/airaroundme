@@ -17,6 +17,9 @@ function initMap() {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             });
+
+            // Call the search button to apply the markers
+            $("#search-button").click();
         });
     }
 
@@ -72,6 +75,9 @@ function initMap() {
             }
         });
         map.fitBounds(bounds);
+
+        // Call the search button to apply the markers
+        $("#search-button").click();
     });
 
     /**
