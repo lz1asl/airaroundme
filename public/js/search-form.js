@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+
     // Search on the map
     $("#search-button").click(function(e) {
         var bounds = map.getBounds();
@@ -35,14 +37,14 @@ $(document).ready(function() {
             success: function(landmarks) {
                 // Update map notification
                 if(landmarks.length > 0) {
-                    $("#map-warning-notification").show();
+                    $("#map-warning-notification").css("opacity", 1);
                     setTimeout(function() {
-                        $("#map-warning-notification").hide();
+                        $("#map-warning-notification").css("opacity", 0);
                     }, 5000);
                 } else {
-                    $("#map-clean-notification").show();
+                    $("#map-clean-notification").css("opacity", 1);
                     setTimeout(function() {
-                        $("#map-clean-notification").hide();
+                        $("#map-clean-notification").css("opacity", 0);
                     }, 5000);
                 }
 

@@ -63,8 +63,4 @@ function initMap() {
         // Call the search button to apply the markers
         $("#search-button").click();
     });
-
-    // Hide the map notifications
-    $("#map-warning-notification").hide();
-    $("#map-clean-notification").hide();
 }
