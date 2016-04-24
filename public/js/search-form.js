@@ -28,7 +28,7 @@ $(document).ready(function() {
         e.preventDefault();
 
         $.ajax({
-            url: "/search",
+            url: "reports/search",
             type: "POST",
             data: JSON.stringify(body),
             contentType: "application/json",
