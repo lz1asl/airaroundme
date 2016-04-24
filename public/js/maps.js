@@ -1,4 +1,5 @@
-var map;
+var map,
+    mapMarkers = [];
 
 function initMap() {
     // Initialize the google maps with default settings

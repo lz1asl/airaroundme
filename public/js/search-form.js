@@ -1,3 +1,10 @@
+function clearMarkers() {
+    for (var i = 0; i < mapMarkers.length; i++) {
+        mapMarkers[i].setMap(null);
+    }
+    mapMarkers = [];
+}
+
 var searchData = function () {
     var bounds = map.getBounds();
 
@@ -30,6 +37,9 @@ var searchData = function () {
         data: JSON.stringify(body),
         contentType: "application/json",
         success: function(landmarks) {
+            // Clear all the markers
+            clearMarkers();
+
             // Update map notification
             if(landmarks.length > 0) {
                 $("#map-warning-notification").show();
@@ -60,6 +70,8 @@ var searchData = function () {
                 marker.addListener('click', function() {
                     infoWindow.open(map, marker);
                 });
+
+                mapMarkers.push(marker);
             });
 
         },
