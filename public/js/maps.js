@@ -71,7 +71,7 @@ function initMap() {
     });
 }
 
-var options = [];
+var options = ["user", "weather", "fire"];
 
 $('.dropdown-menu a').on('click', function(event) {
 
