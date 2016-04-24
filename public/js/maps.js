@@ -6,6 +6,7 @@ function initMap() {
         center: {lat: 0, lng: 0},
         styles: styleSheet,
         zoom: 10,
+        scrollwheel: false,
         mapTypeId: google.maps.MapTypeId.TERRAIN
     });
 
