@@ -92,8 +92,13 @@ $('.dropdown-menu a').on('click', function(event) {
 });
 
 $('#filter-dropdown').on('blur', function(event) {
-    debugger;
-    if($('.dropdown-menu').visible(true)) {
+    if($('#filter-dropdown').attr('aria-expanded') == 'false') {
+        $("#search-button").click();
+    }
+});
+
+$('#map-filter').on('blur', function(event) {
+    if($('#filter-dropdown').attr('aria-expanded') == 'false') {
         $("#search-button").click();
     }
 });
