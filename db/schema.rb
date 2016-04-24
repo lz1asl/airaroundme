@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20160424061717) do
     t.datetime "updated_at",  null: false
     t.integer  "severity_id"
     t.integer  "sympthom_id"
-    t.string   "type"
+    t.string   "reporttype"
   end
 
   add_index "reports", ["severity_id"], name: "index_reports_on_severity_id", using: :btree
