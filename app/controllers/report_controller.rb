@@ -3,7 +3,7 @@ class ReportController < ApplicationController
 
   def list
     @reports =  Report.all
-    render json: @reports, :only => [:id, :lat, :lon, :from, :note, :severity_id, :sympthom_id]
+    render json: @reports, :only => [:id, :lat, :lon, :from, :note, :severity_id, :sympthom_id, :reporttype]
   end
 
 
@@ -46,7 +46,8 @@ class ReportController < ApplicationController
           from: report['from'],
           note: report['note'],
           lat: report['lat'],
-          lon: report['lon']
+          lon: report['lon'],
+          reporttype: 'user'
       )
 
       @report.severity_id = report['severity'] unless report['severity'].blank?
