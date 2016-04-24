@@ -20,11 +20,11 @@ class ReportController < ApplicationController
       marker = { lat: report.lat, lng: report.lon, title: report.note}
       case report.severity_id
         when 1
-          marker[:icon] = 'ylw_circle'
+          marker[:icon] = 'yellow'
         when 2
-          marker[:icon] = 'orange_circle'
+          marker[:icon] = 'orange'
         when 3
-          marker[:icon] = 'red_diamond'
+          marker[:icon] = 'red'
       end
 
       puts report.reporttype
@@ -37,13 +37,14 @@ class ReportController < ApplicationController
         when 'temperature'
           marker[:icon] = 'sunny'
         when 'tornado'
-          marker[:icon] = 'thunderstorm'
+          marker[:icon] = 'flag'
         when 'wave'
           marker[:icon] = 'water'
         when 'wind'
-          marker[:icon] = 'red_diamond'
+          marker[:icon] = 'caution'
+        when 'fire'
+          marker[:icon] = 'firedept'
       end
-      #firedept
 
       @markers << marker
     end

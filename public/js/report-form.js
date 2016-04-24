@@ -48,7 +48,11 @@ $(document).ready(function() {
             data: JSON.stringify(body),
             contentType: "application/json",
             success: function(result) {
-                $("sharelink").html(result);
+                $("#report-form").find("input, textarea, select").val("");
+                $("#notifcation-area").show();
+                setTimeout(function() {
+                    $("#notifcation-area").hide();
+                }, 2000);
             }
         });
     });
