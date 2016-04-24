@@ -82,7 +82,8 @@ var options = [
     "wave",
     "wind",
     "aridity",
-    "hail"
+    "hail",
+    "pressure"
 ];
 
 $('.dropdown-menu a').on('click', function(event) {
