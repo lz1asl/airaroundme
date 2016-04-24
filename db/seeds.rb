@@ -42,7 +42,7 @@ def importFile(file, reporttype)
     config.strict.nonet
   end
   markers.xpath("//markers/marker").each do |marker|
-    createReport(marker, 'reporttype')
+    createReport(marker, reporttype)
   end
 end
 
