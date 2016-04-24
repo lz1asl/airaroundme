@@ -92,28 +92,27 @@
                 </div>
             </div>
             <!-- /.row -->
+            <form method="post" action="" class="hidden">
+                <button id="search-button">Search</button>
+            </form>
+
+            <div class="bs-example" id="map-warning-notification">
+                <div class="alert alert-warning fade in">
+                    <strong>People in this area have reported problems!</strong>
+                </div>
+            </div>
+
+            <div class="bs-example" id="map-clean-notification">
+                <div class="alert alert-success fade in">
+                    <strong>No reports in this area!</strong>
+                </div>
+            </div>
         </div>
         <!-- /.container -->
     </section>
 
     <!-- Map -->
     <section id="airaroudyou" class="map">
-
-        <form method="post" action="" class="hidden">
-            <button id="search-button">Search</button>
-        </form>
-
-        <div class="bs-example" id="map-warning-notification">
-            <div class="alert alert-warning fade in">
-                <strong>People in this area have reported problems!</strong>
-            </div>
-        </div>
-
-        <div class="bs-example" id="map-clean-notification">
-            <div class="alert alert-success fade in">
-                <strong>No reports in this area!</strong>
-            </div>
-        </div>
 
         <div class="button-group absolute-filter">
             <button type="button" class="btn btn-sm dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-filter"></span> Filter <span class="caret"></span></button>
