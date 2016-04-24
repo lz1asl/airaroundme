@@ -72,7 +72,18 @@ function initMap() {
     });
 }
 
-var options = ["user", "weather", "fire"];
+var options = [
+    "user",
+    "weather",
+    "cyclone",
+    "rainfall",
+    "temperature",
+    "tornado",
+    "wave",
+    "wind",
+    "aridity",
+    "hail"
+];
 
 $('.dropdown-menu a').on('click', function(event) {
 
