@@ -355,6 +355,10 @@ footer {
     font-size: 13px;
 }
 
+.absolute-filter .small input {
+    margin-right: 8px;
+}
+
 .mobile-app h3 {
     font-size: 30px;
     text-align: center;
