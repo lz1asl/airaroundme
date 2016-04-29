@@ -34,5 +34,6 @@ $(function() {
     });
 
     $('#myForm').validator();
-    $('.combobox').combobox();
+    
+    // $('.combobox').combobox();
 });
